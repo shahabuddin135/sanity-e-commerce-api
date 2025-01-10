@@ -19,11 +19,11 @@ const apiUrl =
 const Home = () => {
   return (
     <div className={`flex flex-col items-center justify-center h-screen space-y-10 ${marcellus.className}`}>
-      <h1 className="text-7xl font-bold text-center">
+      <h1 className="text-2xl md:text-7xl font-bold text-center">
         THIS API IS CREATED BY <br /> SHAHABUDDIN
       </h1>
       <div className="flex items-center justify-between bg-gray-100 rounded-md px-5 py-2 gap-10 mb-8">
-        <h1 className="text-2xl font-bold">Click to Copy The API</h1>
+        <h1 className=" text-lg md:text-2xl font-bold">Click to Copy The API</h1>
       
         <CopyButton textToCopy={`${apiUrl}/api/products`} />
       </div>
