@@ -13,7 +13,7 @@ const marcellus = Marcellus({
 const apiUrl =
   process.env.NEXT_PUBLIC_API_URL ||
   (process.env.VERCEL_URL
-    ? `https://${process.env.VERCEL_URL}`
+    ? `https://template-6-api.vercel.app/api/products`
     : "http://localhost:3000");
 
 const Home = () => {
@@ -23,7 +23,7 @@ const Home = () => {
         THIS API IS CREATED BY <br /> SHAHABUDDIN
       </h1>
       <div className="flex items-center justify-between bg-gray-100 rounded-md px-5 py-2 gap-10 mb-8">
-        <h1 className=" text-lg md:text-2xl font-bold">Click to Copy The API</h1>
+        <h1 className=" text-lg md:text-4xl font-bold">Click to Copy The API</h1>
       
         <CopyButton textToCopy={`${apiUrl}/api/products`} />
       </div>
