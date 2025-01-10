@@ -18,13 +18,18 @@ export async function GET() {
 
     // Parse JSON before sending
     const parsedProducts = JSON.parse(products);
-    
+
     return NextResponse.json(parsedProducts, { headers });
   } catch (error) {
     console.error('Error fetching products:', error);
+
+    // Add error handling with headers
     return NextResponse.json(
       { error: 'Failed to fetch products' },
-      { status: 500, headers: { 'Access-Control-Allow-Origin': '*' } }
+      { 
+        status: 500, 
+        headers: { 'Access-Control-Allow-Origin': '*' } // Ensure CORS for error response
+      }
     );
   }
 }
