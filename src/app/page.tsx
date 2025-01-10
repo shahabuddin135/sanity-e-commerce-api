@@ -13,7 +13,7 @@ const marcellus = Marcellus({
 const apiUrl =
   process.env.NEXT_PUBLIC_API_URL ||
   (process.env.VERCEL_URL
-    ? `https://template-6-api.vercel.app/api/products`
+    ? `https://template-6-api.vercel.app`
     : "http://localhost:3000");
 
 const Home = () => {
