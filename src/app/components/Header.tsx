@@ -19,14 +19,15 @@ const Header: React.FC = () => {
               Home
             </Link>
           </li>
+         
           <li>
-            <Link href="/about" className="text-gray-600 hover:text-indigo-600 transition-colors duration-300">
-              About the Developer
+            <Link href="/sanity-guide" className="text-gray-600 hover:text-indigo-600 transition-colors duration-300">
+              Sanity Docs
             </Link>
           </li>
           <li>
             <Link href="/docs" className="text-gray-600 hover:text-indigo-600 transition-colors duration-300">
-              Document
+              API Docs
             </Link>
           </li>
         </ul>
