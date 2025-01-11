@@ -75,7 +75,7 @@ export default function Home() {
               Read the Docs
             </motion.button>
           </Link>
-          <Link href="/about" className="w-full">
+          <Link href="/sanity-guide" className="w-full">
             <motion.button 
               className="w-full bg-purple-600 text-white px-6 py-4 rounded-lg hover:bg-purple-700 transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2 shadow-md"
               whileHover={{ scale: 1.05 }}
