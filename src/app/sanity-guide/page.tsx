@@ -279,7 +279,7 @@ const Step: React.FC<StepProps> = ({ step, index, isOpen, toggleStep }) => {
     <div className="mb-6">
       <button
         onClick={() => toggleStep(index)}
-        className="flex items-center justify-between w-full text-left text-xl font-semibold bg-indigo-100 p-4 rounded-lg hover:bg-indigo-200 transition-colors duration-200"
+        className="flex items-center justify-between w-full text-left text-xl font-semibold bg-indigo-300 p-4 rounded-lg hover:bg-indigo-200 transition-colors duration-200"
       >
         <span>{`Step ${index + 1}: ${step.title}`}</span>
         {isOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
@@ -329,7 +329,7 @@ const SanityUploadGuide = () => {
          <h1 className={`${marcellus.className}`}> Upload Data to Sanity - Beginner&apos;s Guide</h1>
         </motion.h1>
         <motion.div 
-          className="bg-white rounded-xl shadow-lg p-6 mb-8"
+          className="bg-white  rounded-xl text-indigo-900 shadow-lg p-6 mb-8"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
@@ -344,25 +344,13 @@ const SanityUploadGuide = () => {
             />
           ))}
         </motion.div>
-        <motion.div 
-          className="bg-white rounded-xl shadow-lg p-6"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-        >
-          <h2 className="text-2xl font-semibold mb-4 text-indigo-900">Conclusion</h2>
-          <p className="text-gray-700">
-            By following these steps, you&apos;ve successfully imported your data into Sanity CMS.
-            You can now manage and query your content using Sanity&apos;s powerful features.
-            Make sure to follow the best practices for maintaining and updating your data.
-          </p>
-        </motion.div>
+       
         <div className="mt-8 text-center">
           <a 
             href="https://www.sanity.io/docs" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+            className="inline-flex items-center  text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
           >
             Learn more about Sanity
             <ExternalLink size={20} className="ml-2" />

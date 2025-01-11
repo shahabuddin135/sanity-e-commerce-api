@@ -17,7 +17,7 @@ const apiUrl =  `https://template-6-api.vercel.app`;
 export default function Home() {
   return (
     <div className="min-h-screen  bg-gradient-to-br from-indigo-100 to-purple-100 flex flex-col items-center justify-center p-4 md:p-8">
-      <main className="w-full max-w-4xl pt-16 mx-auto space-y-12">
+      <main className="w-full max-w-4xl pt-28 md:pt-16  mx-auto space-y-12">
         <motion.div
           className="text-center space-y-4"
           initial={{ opacity: 0, y: -20 }}
@@ -40,11 +40,11 @@ export default function Home() {
         >
           <h2 className="text-2xl font-semibold text-gray-800">API Endpoints</h2>
           <div className="space-y-4">
-            <div className="flex items-center justify-between gap-4 bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-gray-50 p-4 rounded-lg border border-gray-200">
               <p className="text-sm md:text-base text-gray-600 break-all font-mono">{`${apiUrl}/api/products`}</p>
               <CopyButton textToCopy={`${apiUrl}/api/products`} />
             </div>
-            <div className="flex items-center justify-between gap-4 bg-gray-50 p-4 rounded-lg border border-gray-200">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-4 bg-gray-50 p-4 rounded-lg border border-gray-200">
               <p className="text-sm md:text-base text-gray-600 break-all font-mono">{`${apiUrl}/api/images`}</p>
               <CopyButton textToCopy={`${apiUrl}/api/images`} />
             </div>
