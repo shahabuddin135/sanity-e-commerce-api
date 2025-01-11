@@ -2,61 +2,28 @@ import { NextResponse } from "next/server";
 import fs from "fs";
 import path from "path";
 
-export async function GET(request: Request) {
+export async function GET() {
   try {
-    // Get the `name` query parameter from the request URL
-    const { searchParams } = new URL(request.url);
-    const name = searchParams.get("name");
+    const imagesDir = path.join(process.cwd(), "public", "images");
 
-    if (!name) {
-      return NextResponse.json(
-        { error: "Image name is required as a query parameter." },
-        { status: 400 }
-      );
-    }
+    // Read all files in the images directory
+    const files = fs.readdirSync(imagesDir);
 
-    // Construct the file path
-    const filePath = path.join(process.cwd(), "public", "images", name);
+    // Filter for image files and create URLs for them
+    const images = files
+      .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)) // Filter image files
+      .map((file) => ({
+        name: file,
+        url: `/images/${encodeURIComponent(file)}`, // Generate image URL
+      }));
 
-    // Check if the file exists
-    if (!fs.existsSync(filePath)) {
-      return NextResponse.json(
-        { error: `Image '${name}' not found.` },
-        { status: 404 }
-      );
-    }
-
-    // Read the file and serve it as a response
-    const fileBuffer = fs.readFileSync(filePath);
-    return new Response(fileBuffer, {
-      status: 200,
-      headers: {
-        "Content-Type": getContentType(name),
-      },
-    });
+    // Return a JSON object of images
+    return NextResponse.json({ images });
   } catch (error) {
-    console.error("Error serving image:", error);
+    console.error("Error reading images directory:", error);
     return NextResponse.json(
-      { error: "Failed to process the request." },
+      { error: "Failed to retrieve images." },
       { status: 500 }
     );
-  }
-}
-
-// Utility function to determine content type
-function getContentType(filename: string): string {
-  const ext = path.extname(filename).toLowerCase();
-  switch (ext) {
-    case ".jpg":
-    case ".jpeg":
-      return "image/jpeg";
-    case ".png":
-      return "image/png";
-    case ".gif":
-      return "image/gif";
-    case ".webp":
-      return "image/webp";
-    default:
-      return "application/octet-stream";
   }
 }

@@ -116,9 +116,75 @@ const DocsPage = () => {
             />
 
             <Endpoint
-              title="2. Get All Images"
+              title="2. Get Single Product"
+              method="GET"
+              path="/api/products/[id]"
+              responseFields={[
+                { name: 'id', description: 'Product identifier' },
+                { name: 'name', description: 'Product name' },
+                { name: 'description', description: 'Detailed product description' },
+                { name: 'price', description: 'Current price (in paise/cents)' },
+                { name: 'originalPrice', description: 'Original price before discount' },
+                { name: 'discount', description: 'Discount percentage' },
+                { name: 'category', description: 'Product category' },
+                { name: 'images', description: 'Object containing image URLs' },
+                { name: 'dimensions', description: 'Product dimensions' },
+                { name: 'reviews', description: 'Array of customer reviews' },
+              ]}
+              exampleResponse={`{
+  "id": "SS001",
+  "name": "Modern Leather Sofa",
+  "description": "A sleek and luxurious leather sofa...",
+  "price": 320000,
+  "originalPrice": 350000,
+  "discount": 8.57,
+  "category": "Sofas",
+  "images": {
+    "mainImage": "/images/sofa-main.jpeg",
+    "sideAngleImages": [
+      "/images/sofa-angle1.jpeg",
+      "/images/sofa-angle2.jpeg"
+    ]
+  },
+  "dimensions": {
+    "width": "280 cm",
+    "height": "80 cm",
+    "depth": "170 cm"
+  },
+  "reviews": [
+    {
+      "rating": 4.8,
+      "comment": "Excellent quality!",
+      "user": "John Doe"
+    }
+  ]
+}`}
+            />
+
+            <Endpoint
+              title="3. Get All Images"
               method="GET"
               path="/api/images"
+              responseFields={[
+                { name: 'name', description: 'Image filename' },
+                { name: 'url', description: 'Relative path to image' },
+              ]}
+              exampleResponse={`[
+  {
+    "name": "sofa-main.jpeg",
+    "url": "/images/sofa-main.jpeg"
+  },
+  {
+    "name": "sofa-angle1.jpeg",
+    "url": "/images/sofa-angle1.jpeg"
+  }
+]`}
+            />
+
+            <Endpoint
+              title="4. Access Individual Images"
+              method="GET"
+              path="/images/[filename]"
               responseFields={[
                 { name: 'name', description: 'Image filename' },
                 { name: 'url', description: 'Relative path to image' },
