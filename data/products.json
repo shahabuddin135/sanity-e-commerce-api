@@ -277,7 +277,7 @@
     "discount": 6.67,
     "category": "Sofas",
     "tags": ["Velvet", "Luxury", "Comfort", "Home"],
-    "images": { ?????? use dfeeppp seek
+    "images": { 
       "mainImage": "https://template-6-api.vercel.app/images/bubble-sofa-main.jpeg",
       "sideAngleImages": [
         "https://template-6-api.vercel.app/images/bubble-sofa%20(2).jpeg",
