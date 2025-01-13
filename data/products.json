@@ -1,3 +1,4 @@
+
 [
   {
     "_key": "SS002",
@@ -12,10 +13,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/bed%20(5).jpeg",
-        "https://template-6-api.vercel.app/images/bed%20(4).jpeg",
-        "https://template-6-api.vercel.app/images/bed%20(2).jpeg",
-        "https://template-6-api.vercel.app/images/bed%20(1).jpeg"
+        { "_key": "SS002-1", "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg" },
+        { "_key": "SS002-2", "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg" },
+        { "_key": "SS002-3", "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg" },
+        { "_key": "SS002-4", "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg" }
       ]
     },
     "color": ["Black", "Brown"],
@@ -102,10 +103,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/black-chair-main.jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/black-chair%20(4).jpeg",
-        "https://template-6-api.vercel.app/images/black-chair%20(3).jpeg",
-        "https://template-6-api.vercel.app/images/black-chair%20(2).jpeg",
-        "https://template-6-api.vercel.app/images/black-chair%20(1).jpeg"
+        { "_key": "SS003-1", "url": "https://template-6-api.vercel.app/images/black-chair%20(4).jpeg" },
+        { "_key": "SS003-2", "url": "https://template-6-api.vercel.app/images/black-chair%20(3).jpeg" },
+        { "_key": "SS003-3", "url": "https://template-6-api.vercel.app/images/black-chair%20(2).jpeg" },
+        { "_key": "SS003-4", "url": "https://template-6-api.vercel.app/images/black-chair%20(1).jpeg" }
       ]
     },
     "color": ["Beige", "Grey"],
@@ -192,8 +193,8 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/brown-sofa-main.jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/brown-sofa%20(2).jpeg",
-        "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
+        { "_key": "SS004-1", "url": "https://template-6-api.vercel.app/images/brown-sofa%20(2).jpeg" },
+        { "_key": "SS004-2", "url": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg" }
       ]
     },
     "color": ["Brown", "Beige"],
@@ -261,7 +262,7 @@
       },
       {
         "id": "SS002",
-        "name": "Modern Leather Sofa", 
+        "name": "Modern Leather Sofa",
         "price": 320000,
         "image": "https://template-6-api.vercel.app/images/bed-main.jpeg"
       }
@@ -277,11 +278,11 @@
     "discount": 6.67,
     "category": "Sofas",
     "tags": ["Velvet", "Luxury", "Comfort", "Home"],
-    "images": { 
+    "images": {
       "mainImage": "https://template-6-api.vercel.app/images/bubble-sofa-main.jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/bubble-sofa%20(2).jpeg",
-        "https://template-6-api.vercel.app/images/bubble-sofa%20(1).jpeg"
+        { "_key": "SS005-1", "url": "https://template-6-api.vercel.app/images/bubble-sofa%20(2).jpeg" },
+        { "_key": "SS005-2", "url": "https://template-6-api.vercel.app/images/bubble-sofa%20(1).jpeg" }
       ]
     },
     "color": ["Emerald Green", "Royal Blue"],
@@ -351,7 +352,7 @@
         "id": "SS002",
         "name": "Modern Leather Sofa",
         "price": 320000,
-        "image": "/images/bed-main.jpeg"
+        "image": "https://template-6-api.vercel.app/images/bed-main.jpeg"
       }
     ]
   },
@@ -368,10 +369,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/flower-lamp-main.jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/flower-lamp%20(4).jpeg",
-        "https://template-6-api.vercel.app/images/flower-lamp%20(3).jpeg",
-        "https://template-6-api.vercel.app/images/flower-lamp%20(2).jpeg",
-        "https://template-6-api.vercel.app/images/flower-lamp%20(1).jpeg"
+        { "_key": "SS006-1", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(4).jpeg" },
+        { "_key": "SS006-2", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(3).jpeg" },
+        { "_key": "SS006-3", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(2).jpeg" },
+        { "_key": "SS006-4", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(1).jpeg" }
       ]
     },
     "color": ["Natural Wood", "Walnut"],
@@ -458,10 +459,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/marble-table-main%20(2).jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/marble-table-main%20(1).jpeg",
-        "https://template-6-api.vercel.app/images/marble-table-main%20(3).jpeg",
-        "https://template-6-api.vercel.app/images/marble-table-main%20(4).jpeg",
-        "https://template-6-api.vercel.app/images/marble-table-main%20(5).jpeg"
+        { "_key": "SS007-1", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(1).jpeg" },
+        { "_key": "SS007-2", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(3).jpeg" },
+        { "_key": "SS007-3", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(4).jpeg" },
+        { "_key": "SS007-4", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(5).jpeg" }
       ]
     },
     "color": ["Multicolor", "Teal"],
@@ -548,10 +549,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/mirrors-main.jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/mirrors%20(4).jpeg",
-        "https://template-6-api.vercel.app/images/mirrors%20(3).jpeg",
-        "https://template-6-api.vercel.app/images/mirrors%20(2).jpeg",
-        "https://template-6-api.vercel.app/images/mirrors%20(1).jpeg"
+        { "_key": "SS008-1", "url": "https://template-6-api.vercel.app/images/mirrors%20(4).jpeg" },
+        { "_key": "SS008-2", "url": "https://template-6-api.vercel.app/images/mirrors%20(3).jpeg" },
+        { "_key": "SS008-3", "url": "https://template-6-api.vercel.app/images/mirrors%20(2).jpeg" },
+        { "_key": "SS008-4", "url": "https://template-6-api.vercel.app/images/mirrors%20(1).jpeg" }
       ]
     },
     "color": ["Mustard Yellow", "Dark Brown"],
@@ -638,10 +639,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/old-lamp-main.jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/old-lamp%20(5).jpeg",
-        "https://template-6-api.vercel.app/images/old-lamp%20(3).jpeg",
-        "https://template-6-api.vercel.app/images/old-lamp%20(2).jpeg",
-        "https://template-6-api.vercel.app/images/old-lamp%20(1).jpeg"
+        { "_key": "SS009-1", "url": "https://template-6-api.vercel.app/images/old-lamp%20(5).jpeg" },
+        { "_key": "SS009-2", "url": "https://template-6-api.vercel.app/images/old-lamp%20(3).jpeg" },
+        { "_key": "SS009-3", "url": "https://template-6-api.vercel.app/images/old-lamp%20(2).jpeg" },
+        { "_key": "SS009-4", "url": "https://template-6-api.vercel.app/images/old-lamp%20(1).jpeg" }
       ]
     },
     "color": ["Charcoal Grey", "Navy Blue"],
@@ -728,9 +729,9 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/round-table-main.jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/round-table%20(3).jpeg",
-        "https://template-6-api.vercel.app/images/round-table%20(2).jpeg",
-        "https://template-6-api.vercel.app/images/round-table%20(1).jpg"
+        { "_key": "SS010-1", "url": "https://template-6-api.vercel.app/images/round-table%20(3).jpeg" },
+        { "_key": "SS010-2", "url": "https://template-6-api.vercel.app/images/round-table%20(2).jpeg" },
+        { "_key": "SS010-3", "url": "https://template-6-api.vercel.app/images/round-table%20(1).jpg" }
       ]
     },
     "color": ["Black", "Brown"],
@@ -819,10 +820,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/white-sofa-main.jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/white-sofa%20(2).jpeg",
-        "https://template-6-api.vercel.app/images/white-sofa%20(3).jpeg",
-        "https://template-6-api.vercel.app/images/white-sofa%20(4).jpeg",
-        "https://template-6-api.vercel.app/images/white-sofa%20(5).jpeg"
+        { "_key": "SS011-1", "url": "https://template-6-api.vercel.app/images/white-sofa%20(2).jpeg" },
+        { "_key": "SS011-2", "url": "https://template-6-api.vercel.app/images/white-sofa%20(3).jpeg" },
+        { "_key": "SS011-3", "url": "https://template-6-api.vercel.app/images/white-sofa%20(4).jpeg" },
+        { "_key": "SS011-4", "url": "https://template-6-api.vercel.app/images/white-sofa%20(5).jpeg" }
       ]
     },
     "color": ["Blue", "Pink"],
@@ -909,10 +910,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/white-chair-main.jpeg",
       "sideAngleImages": [
-        "https://template-6-api.vercel.app/images/white-chair%20(1).jpeg",
-        "https://template-6-api.vercel.app/images/white-chair%20(3).jpeg",
-        "https://template-6-api.vercel.app/images/white-chair%20(4).jpeg",
-        "https://template-6-api.vercel.app/images/white-chair%20(5).jpeg"
+        { "_key": "SS012-1", "url": "https://template-6-api.vercel.app/images/white-chair%20(1).jpeg" },
+        { "_key": "SS012-2", "url": "https://template-6-api.vercel.app/images/white-chair%20(3).jpeg" },
+        { "_key": "SS012-3", "url": "https://template-6-api.vercel.app/images/white-chair%20(4).jpeg" },
+        { "_key": "SS012-4", "url": "https://template-6-api.vercel.app/images/white-chair%20(5).jpeg" }
       ]
     },
     "color": ["Brown", "Burgundy"],
