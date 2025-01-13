@@ -1,7 +1,6 @@
-
 [
   {
-    "_key": "SS002",
+    "key": "SS002",
     "id": "SS002",
     "name": "Modern Leather Sofa",
     "description": "A sleek and luxurious leather sofa designed for contemporary living spaces. The smooth leather finish and clean lines make it a perfect centerpiece for modern interiors.",
@@ -13,10 +12,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
       "sideAngleImages": [
-        { "_key": "SS002-1", "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg" },
-        { "_key": "SS002-2", "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg" },
-        { "_key": "SS002-3", "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg" },
-        { "_key": "SS002-4", "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg" }
+        { "key": "SS002-1", "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg" },
+        { "key": "SS002-2", "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg" },
+        { "key": "SS002-3", "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg" },
+        { "key": "SS002-4", "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg" }
       ]
     },
     "color": ["Black", "Brown"],
@@ -47,11 +46,13 @@
     },
     "reviews": [
       {
+        "key": "SS002-R1",
         "rating": 4.8,
         "comment": "Absolutely stunning! The leather feels premium.",
         "user": "Alice Johnson"
       },
       {
+        "key": "SS002-R2",
         "rating": 4.5,
         "comment": "Comfortable and stylish, but a bit heavy.",
         "user": "Michael Brown"
@@ -77,12 +78,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS001",
         "id": "SS001",
         "name": "Brown Sofa",
         "price": 250000,
         "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
       {
+        "key": "SS003",
         "id": "SS003",
         "name": "Stylish Cafe Chair",
         "price": 350000,
@@ -91,7 +94,7 @@
     ]
   },
   {
-    "_key": "SS003",
+    "key": "SS003",
     "id": "SS003",
     "name": "Minimalist Fabric Sofa",
     "description": "A simple yet elegant fabric sofa, perfect for minimalist interiors. The neutral tones and clean design make it versatile for any living space.",
@@ -103,10 +106,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/black-chair-main.jpeg",
       "sideAngleImages": [
-        { "_key": "SS003-1", "url": "https://template-6-api.vercel.app/images/black-chair%20(4).jpeg" },
-        { "_key": "SS003-2", "url": "https://template-6-api.vercel.app/images/black-chair%20(3).jpeg" },
-        { "_key": "SS003-3", "url": "https://template-6-api.vercel.app/images/black-chair%20(2).jpeg" },
-        { "_key": "SS003-4", "url": "https://template-6-api.vercel.app/images/black-chair%20(1).jpeg" }
+        { "key": "SS003-1", "url": "https://template-6-api.vercel.app/images/black-chair%20(4).jpeg" },
+        { "key": "SS003-2", "url": "https://template-6-api.vercel.app/images/black-chair%20(3).jpeg" },
+        { "key": "SS003-3", "url": "https://template-6-api.vercel.app/images/black-chair%20(2).jpeg" },
+        { "key": "SS003-4", "url": "https://template-6-api.vercel.app/images/black-chair%20(1).jpeg" }
       ]
     },
     "color": ["Beige", "Grey"],
@@ -137,11 +140,13 @@
     },
     "reviews": [
       {
+        "key": "SS003-R1",
         "rating": 4.6,
         "comment": "Very comfortable and easy to clean.",
         "user": "Sarah Lee"
       },
       {
+        "key": "SS003-R2",
         "rating": 4.3,
         "comment": "Great value for money.",
         "user": "David Wilson"
@@ -167,12 +172,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS001",
         "id": "SS001",
         "name": "Brown Sofa",
         "price": 250000,
         "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
       {
+        "key": "SS002",
         "id": "SS002",
         "name": "Modern Leather Sofa",
         "price": 320000,
@@ -181,7 +188,7 @@
     ]
   },
   {
-    "_key": "SS004",
+    "key": "SS004",
     "id": "SS004",
     "name": "Outdoor Sofa Set",
     "description": "A durable and stylish outdoor sofa set, perfect for patios and gardens. The weatherproof fabric and sturdy frame ensure long-lasting use.",
@@ -193,8 +200,8 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/brown-sofa-main.jpeg",
       "sideAngleImages": [
-        { "_key": "SS004-1", "url": "https://template-6-api.vercel.app/images/brown-sofa%20(2).jpeg" },
-        { "_key": "SS004-2", "url": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg" }
+        { "key": "SS004-1", "url": "https://template-6-api.vercel.app/images/brown-sofa%20(2).jpeg" },
+        { "key": "SS004-2", "url": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg" }
       ]
     },
     "color": ["Brown", "Beige"],
@@ -225,11 +232,13 @@
     },
     "reviews": [
       {
+        "key": "SS004-R1",
         "rating": 4.7,
         "comment": "Perfect for my patio!",
         "user": "Emily Davis"
       },
       {
+        "key": "SS004-R2",
         "rating": 4.4,
         "comment": "Very sturdy and comfortable.",
         "user": "James Wilson"
@@ -255,12 +264,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS001",
         "id": "SS001",
         "name": "Brown Sofa",
         "price": 250000,
         "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
       {
+        "key": "SS002",
         "id": "SS002",
         "name": "Modern Leather Sofa",
         "price": 320000,
@@ -269,7 +280,7 @@
     ]
   },
   {
-    "_key": "SS005",
+    "key": "SS005",
     "id": "SS005",
     "name": "Velvet Luxury Sofa",
     "description": "A plush velvet sofa that adds a touch of luxury to any living space. The rich texture and vibrant colors make it a statement piece.",
@@ -281,8 +292,8 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/bubble-sofa-main.jpeg",
       "sideAngleImages": [
-        { "_key": "SS005-1", "url": "https://template-6-api.vercel.app/images/bubble-sofa%20(2).jpeg" },
-        { "_key": "SS005-2", "url": "https://template-6-api.vercel.app/images/bubble-sofa%20(1).jpeg" }
+        { "key": "SS005-1", "url": "https://template-6-api.vercel.app/images/bubble-sofa%20(2).jpeg" },
+        { "key": "SS005-2", "url": "https://template-6-api.vercel.app/images/bubble-sofa%20(1).jpeg" }
       ]
     },
     "color": ["Emerald Green", "Royal Blue"],
@@ -313,11 +324,13 @@
     },
     "reviews": [
       {
+        "key": "SS005-R1",
         "rating": 4.9,
         "comment": "Absolutely luxurious! The velvet feels amazing.",
         "user": "Olivia Taylor"
       },
       {
+        "key": "SS005-R2",
         "rating": 4.6,
         "comment": "Great addition to my living room.",
         "user": "Daniel Harris"
@@ -343,12 +356,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS001",
         "id": "SS001",
         "name": "Brown Sofa",
         "price": 250000,
         "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
       {
+        "key": "SS002",
         "id": "SS002",
         "name": "Modern Leather Sofa",
         "price": 320000,
@@ -357,7 +372,7 @@
     ]
   },
   {
-    "_key": "SS006",
+    "key": "SS006",
     "id": "SS006",
     "name": "Scandinavian Wooden Sofa",
     "description": "A minimalist wooden sofa inspired by Scandinavian design. The natural wood finish and clean lines make it perfect for modern interiors.",
@@ -369,10 +384,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/flower-lamp-main.jpeg",
       "sideAngleImages": [
-        { "_key": "SS006-1", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(4).jpeg" },
-        { "_key": "SS006-2", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(3).jpeg" },
-        { "_key": "SS006-3", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(2).jpeg" },
-        { "_key": "SS006-4", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(1).jpeg" }
+        { "key": "SS006-1", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(4).jpeg" },
+        { "key": "SS006-2", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(3).jpeg" },
+        { "key": "SS006-3", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(2).jpeg" },
+        { "key": "SS006-4", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(1).jpeg" }
       ]
     },
     "color": ["Natural Wood", "Walnut"],
@@ -403,11 +418,13 @@
     },
     "reviews": [
       {
+        "key": "SS006-R1",
         "rating": 4.7,
         "comment": "Beautiful design and very sturdy.",
         "user": "Emma Johnson"
       },
       {
+        "key": "SS006-R2",
         "rating": 4.4,
         "comment": "Perfect for my small apartment.",
         "user": "Liam Smith"
@@ -433,12 +450,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS001",
         "id": "SS001",
         "name": "Brown Sofa",
         "price": 250000,
         "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
       {
+        "key": "SS003",
         "id": "SS003",
         "name": "Minimalist Fabric Sofa",
         "price": 180000,
@@ -447,7 +466,7 @@
     ]
   },
   {
-    "_key": "SS007",
+    "key": "SS007",
     "id": "SS007",
     "name": "Bohemian Style Sofa",
     "description": "A vibrant and eclectic sofa with a bohemian design. The colorful fabric and unique patterns make it a perfect addition to eclectic interiors.",
@@ -459,10 +478,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/marble-table-main%20(2).jpeg",
       "sideAngleImages": [
-        { "_key": "SS007-1", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(1).jpeg" },
-        { "_key": "SS007-2", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(3).jpeg" },
-        { "_key": "SS007-3", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(4).jpeg" },
-        { "_key": "SS007-4", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(5).jpeg" }
+        { "key": "SS007-1", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(1).jpeg" },
+        { "key": "SS007-2", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(3).jpeg" },
+        { "key": "SS007-3", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(4).jpeg" },
+        { "key": "SS007-4", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(5).jpeg" }
       ]
     },
     "color": ["Multicolor", "Teal"],
@@ -493,11 +512,13 @@
     },
     "reviews": [
       {
+        "key": "SS007-R1",
         "rating": 4.6,
         "comment": "Love the colors! Very comfortable.",
         "user": "Sophia Martinez"
       },
       {
+        "key": "SS007-R2",
         "rating": 4.3,
         "comment": "Great for a cozy living room.",
         "user": "Ethan Garcia"
@@ -523,12 +544,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS003",
         "id": "SS003",
         "name": "Minimalist Fabric Sofa",
         "price": 180000,
         "image": "https://template-6-api.vercel.app/images/black-chair-main.jpeg"
       },
       {
+        "key": "SS005",
         "id": "SS005",
         "name": "Velvet Luxury Sofa",
         "price": 280000,
@@ -537,7 +560,7 @@
     ]
   },
   {
-    "_key": "SS008",
+    "key": "SS008",
     "id": "SS008",
     "name": "Mid-Century Modern Sofa",
     "description": "A timeless mid-century modern sofa with clean lines and elegant design. The mustard yellow upholstery adds a retro touch to any space.",
@@ -549,10 +572,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/mirrors-main.jpeg",
       "sideAngleImages": [
-        { "_key": "SS008-1", "url": "https://template-6-api.vercel.app/images/mirrors%20(4).jpeg" },
-        { "_key": "SS008-2", "url": "https://template-6-api.vercel.app/images/mirrors%20(3).jpeg" },
-        { "_key": "SS008-3", "url": "https://template-6-api.vercel.app/images/mirrors%20(2).jpeg" },
-        { "_key": "SS008-4", "url": "https://template-6-api.vercel.app/images/mirrors%20(1).jpeg" }
+        { "key": "SS008-1", "url": "https://template-6-api.vercel.app/images/mirrors%20(4).jpeg" },
+        { "key": "SS008-2", "url": "https://template-6-api.vercel.app/images/mirrors%20(3).jpeg" },
+        { "key": "SS008-3", "url": "https://template-6-api.vercel.app/images/mirrors%20(2).jpeg" },
+        { "key": "SS008-4", "url": "https://template-6-api.vercel.app/images/mirrors%20(1).jpeg" }
       ]
     },
     "color": ["Mustard Yellow", "Dark Brown"],
@@ -583,11 +606,13 @@
     },
     "reviews": [
       {
+        "key": "SS008-R1",
         "rating": 4.9,
         "comment": "Absolutely stunning! Fits perfectly in my retro-themed living room.",
         "user": "Mia Anderson"
       },
       {
+        "key": "SS008-R2",
         "rating": 4.6,
         "comment": "Very comfortable and stylish.",
         "user": "Lucas Thomas"
@@ -613,12 +638,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS002",
         "id": "SS002",
         "name": "Modern Leather Sofa",
         "price": 320000,
         "image": "https://template-6-api.vercel.app/images/bed-main.jpeg"
       },
       {
+        "key": "SS006",
         "id": "SS006",
         "name": "Scandinavian Wooden Sofa",
         "price": 190000,
@@ -627,7 +654,7 @@
     ]
   },
   {
-    "_key": "SS009",
+    "key": "SS009",
     "id": "SS009",
     "name": "Convertible Sleeper Sofa",
     "description": "A versatile sofa that converts into a comfortable bed. The charcoal grey fabric and sturdy frame make it perfect for small spaces and guest rooms.",
@@ -639,10 +666,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/old-lamp-main.jpeg",
       "sideAngleImages": [
-        { "_key": "SS009-1", "url": "https://template-6-api.vercel.app/images/old-lamp%20(5).jpeg" },
-        { "_key": "SS009-2", "url": "https://template-6-api.vercel.app/images/old-lamp%20(3).jpeg" },
-        { "_key": "SS009-3", "url": "https://template-6-api.vercel.app/images/old-lamp%20(2).jpeg" },
-        { "_key": "SS009-4", "url": "https://template-6-api.vercel.app/images/old-lamp%20(1).jpeg" }
+        { "key": "SS009-1", "url": "https://template-6-api.vercel.app/images/old-lamp%20(5).jpeg" },
+        { "key": "SS009-2", "url": "https://template-6-api.vercel.app/images/old-lamp%20(3).jpeg" },
+        { "key": "SS009-3", "url": "https://template-6-api.vercel.app/images/old-lamp%20(2).jpeg" },
+        { "key": "SS009-4", "url": "https://template-6-api.vercel.app/images/old-lamp%20(1).jpeg" }
       ]
     },
     "color": ["Charcoal Grey", "Navy Blue"],
@@ -673,11 +700,13 @@
     },
     "reviews": [
       {
+        "key": "SS009-R1",
         "rating": 4.8,
         "comment": "Very comfortable as both a sofa and a bed.",
         "user": "Olivia Clark"
       },
       {
+        "key": "SS009-R2",
         "rating": 4.5,
         "comment": "Great for small apartments.",
         "user": "James White"
@@ -703,12 +732,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS001",
         "id": "SS001",
         "name": "Brown Sofa",
         "price": 250000,
         "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
       {
+        "key": "SS003",
         "id": "SS003",
         "name": "Minimalist Fabric Sofa",
         "price": 180000,
@@ -717,7 +748,7 @@
     ]
   },
   {
-    "_key": "SS010",
+    "key": "SS010",
     "id": "SS010",
     "name": "Luxury Recliner Sofa",
     "description": "A premium recliner sofa with built-in massage and heating functions. The black leather upholstery and sleek design make it a luxurious addition to any home.",
@@ -729,9 +760,9 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/round-table-main.jpeg",
       "sideAngleImages": [
-        { "_key": "SS010-1", "url": "https://template-6-api.vercel.app/images/round-table%20(3).jpeg" },
-        { "_key": "SS010-2", "url": "https://template-6-api.vercel.app/images/round-table%20(2).jpeg" },
-        { "_key": "SS010-3", "url": "https://template-6-api.vercel.app/images/round-table%20(1).jpg" }
+        { "key": "SS010-1", "url": "https://template-6-api.vercel.app/images/round-table%20(3).jpeg" },
+        { "key": "SS010-2", "url": "https://template-6-api.vercel.app/images/round-table%20(2).jpeg" },
+        { "key": "SS010-3", "url": "https://template-6-api.vercel.app/images/round-table%20(1).jpg" }
       ]
     },
     "color": ["Black", "Brown"],
@@ -762,11 +793,13 @@
     },
     "reviews": [
       {
+        "key": "SS010-R1",
         "rating": 4.9,
         "comment": "The massage function is amazing!",
         "user": "Sophia Lee"
       },
       {
+        "key": "SS010-R2",
         "rating": 4.7,
         "comment": "Very comfortable and luxurious.",
         "user": "Daniel Harris"
@@ -794,12 +827,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS002",
         "id": "SS002",
         "name": "Modern Leather Sofa",
         "price": 320000,
         "image": "https://template-6-api.vercel.app/images/bed-main.jpeg"
       },
       {
+        "key": "SS005",
         "id": "SS005",
         "name": "Velvet Luxury Sofa",
         "price": 280000,
@@ -808,7 +843,7 @@
     ]
   },
   {
-    "_key": "SS011",
+    "key": "SS011",
     "id": "SS011",
     "name": "Kids' Play Sofa",
     "description": "A fun and colorful sofa designed for kids. The durable plastic frame and easy-to-clean fabric make it perfect for playrooms.",
@@ -820,10 +855,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/white-sofa-main.jpeg",
       "sideAngleImages": [
-        { "_key": "SS011-1", "url": "https://template-6-api.vercel.app/images/white-sofa%20(2).jpeg" },
-        { "_key": "SS011-2", "url": "https://template-6-api.vercel.app/images/white-sofa%20(3).jpeg" },
-        { "_key": "SS011-3", "url": "https://template-6-api.vercel.app/images/white-sofa%20(4).jpeg" },
-        { "_key": "SS011-4", "url": "https://template-6-api.vercel.app/images/white-sofa%20(5).jpeg" }
+        { "key": "SS011-1", "url": "https://template-6-api.vercel.app/images/white-sofa%20(2).jpeg" },
+        { "key": "SS011-2", "url": "https://template-6-api.vercel.app/images/white-sofa%20(3).jpeg" },
+        { "key": "SS011-3", "url": "https://template-6-api.vercel.app/images/white-sofa%20(4).jpeg" },
+        { "key": "SS011-4", "url": "https://template-6-api.vercel.app/images/white-sofa%20(5).jpeg" }
       ]
     },
     "color": ["Blue", "Pink"],
@@ -854,11 +889,13 @@
     },
     "reviews": [
       {
+        "key": "SS011-R1",
         "rating": 4.6,
         "comment": "My kids love it! Very durable.",
         "user": "Emily Davis"
       },
       {
+        "key": "SS011-R2",
         "rating": 4.3,
         "comment": "Easy to clean and assemble.",
         "user": "Michael Brown"
@@ -884,12 +921,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS001",
         "id": "SS001",
         "name": "Brown Sofa",
         "price": 250000,
         "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
       {
+        "key": "SS003",
         "id": "SS003",
         "name": "Minimalist Fabric Sofa",
         "price": 180000,
@@ -898,7 +937,7 @@
     ]
   },
   {
-    "_key": "SS012",
+    "key": "SS012",
     "id": "SS012",
     "name": "Vintage Chesterfield Sofa",
     "description": "A classic Chesterfield sofa with tufted leather and rolled arms. The rich brown leather and timeless design make it a luxurious addition to any home.",
@@ -910,10 +949,10 @@
     "images": {
       "mainImage": "https://template-6-api.vercel.app/images/white-chair-main.jpeg",
       "sideAngleImages": [
-        { "_key": "SS012-1", "url": "https://template-6-api.vercel.app/images/white-chair%20(1).jpeg" },
-        { "_key": "SS012-2", "url": "https://template-6-api.vercel.app/images/white-chair%20(3).jpeg" },
-        { "_key": "SS012-3", "url": "https://template-6-api.vercel.app/images/white-chair%20(4).jpeg" },
-        { "_key": "SS012-4", "url": "https://template-6-api.vercel.app/images/white-chair%20(5).jpeg" }
+        { "key": "SS012-1", "url": "https://template-6-api.vercel.app/images/white-chair%20(1).jpeg" },
+        { "key": "SS012-2", "url": "https://template-6-api.vercel.app/images/white-chair%20(3).jpeg" },
+        { "key": "SS012-3", "url": "https://template-6-api.vercel.app/images/white-chair%20(4).jpeg" },
+        { "key": "SS012-4", "url": "https://template-6-api.vercel.app/images/white-chair%20(5).jpeg" }
       ]
     },
     "color": ["Brown", "Burgundy"],
@@ -944,11 +983,13 @@
     },
     "reviews": [
       {
+        "key": "SS012-R1",
         "rating": 4.9,
         "comment": "Absolutely stunning! Adds a vintage charm to my living room.",
         "user": "Olivia Taylor"
       },
       {
+        "key": "SS012-R2",
         "rating": 4.7,
         "comment": "Very comfortable and luxurious.",
         "user": "Daniel Harris"
@@ -974,12 +1015,14 @@
     ],
     "relatedProducts": [
       {
+        "key": "SS002",
         "id": "SS002",
         "name": "Modern Leather Sofa",
         "price": 320000,
         "image": "https://template-6-api.vercel.app/images/bed-main.jpeg"
       },
       {
+        "key": "SS005",
         "id": "SS005",
         "name": "Velvet Luxury Sofa",
         "price": 280000,
