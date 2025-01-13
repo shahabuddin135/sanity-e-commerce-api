@@ -1,978 +1,989 @@
 [
-    {
-      "id": "SS002",
-      "name": "Modern Leather Sofa",
-      "description": "A sleek and luxurious leather sofa designed for contemporary living spaces. The smooth leather finish and clean lines make it a perfect centerpiece for modern interiors.",
-      "price": 320000,
-      "originalPrice": 350000,
-      "discount": 8.57,
-      "category": "Sofas",
-      "tags": ["Leather", "Modern", "Luxury", "Home"],
-      "images": {
-        "mainImage": "/images/bed-main.jpeg",
-        "sideAngleImages": [
-          "/images/bed%20(5).jpeg",
-          "/images/bed%20(4).jpeg",
-          "/images/bed%20(2).jpeg",
-          "/images/bed%20(1).jpeg"
-        ]
-      },
-      "color": ["Black", "Brown"],
-      "sizes": ["L", "XL"],
-      "stock": 8,
-      "dimensions": {
-        "width": "280 cm",
-        "height": "80 cm",
-        "depth": "170 cm",
-        "weight": "50 kg",
-        "seatHeight": "42 cm",
-        "legHeight": "6 cm"
-      },
-      "material": "Genuine Leather",
-      "secondaryMaterial": "Stainless Steel",
-      "configuration": "Straight",
-      "upholsteryMaterial": "Genuine Leather",
-      "upholsteryColor": "Black",
-      "fillingMaterial": "High-Density Foam",
-      "finishType": "Glossy",
-      "originOfManufacture": "Italy",
-      "warranty": {
-        "summary": "2 Years Warranty",
-        "serviceType": "Email at support@luxurysofas.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to misuse",
-        "domesticWarranty": "2 Years"
-      },
-      "reviews": [
-        {
-          "rating": 4.8,
-          "comment": "Absolutely stunning! The leather feels premium.",
-          "user": "Alice Johnson"
-        },
-        {
-          "rating": 4.5,
-          "comment": "Comfortable and stylish, but a bit heavy.",
-          "user": "Michael Brown"
-        }
-      ],
-      "rating": {
-        "average": 4.6,
-        "breakdown": {
-          "fiveStars": 180,
-          "fourStars": 120,
-          "threeStars": 30,
-          "twoStars": 5,
-          "oneStar": 2
-        }
-      },
-      "salesPackage": "1 Leather Sofa, 2 Cushions",
-      "modelNumber": "LSBLK001",
-      "sku": "SS002",
-      "features": [
-        "Adjustable Headrest: No",
-        "Maximum Load Capacity: 300 KG",
-        "Handmade: Yes"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS001",
-          "name": "Brown Sofa",
-          "price": 250000,
-          "image": "/images/brown-sofa%20(1).jpeg"
-        },
-        {
-          "id": "SS003",
-          "name": "Stylish Cafe Chair",
-          "price": 350000,
-          "image": "/images/black-chair%20(1).jpeg"
-        }
+  {
+    "_key": "SS002",
+    "id": "SS002",
+    "name": "Modern Leather Sofa",
+    "description": "A sleek and luxurious leather sofa designed for contemporary living spaces. The smooth leather finish and clean lines make it a perfect centerpiece for modern interiors.",
+    "price": 320000,
+    "originalPrice": 350000,
+    "discount": 8.57,
+    "category": "Sofas",
+    "tags": ["Leather", "Modern", "Luxury", "Home"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/bed%20(5).jpeg",
+        "https://template-6-api.vercel.app/images/bed%20(4).jpeg",
+        "https://template-6-api.vercel.app/images/bed%20(2).jpeg",
+        "https://template-6-api.vercel.app/images/bed%20(1).jpeg"
       ]
     },
-    {
-      "id": "SS003",
-      "name": "Minimalist Fabric Sofa",
-      "description": "A simple yet elegant fabric sofa, perfect for minimalist interiors. The neutral tones and clean design make it versatile for any living space.",
-      "price": 180000,
-      "originalPrice": 200000,
-      "discount": 10.0,
-      "category": "Sofas",
-      "tags": ["Fabric", "Minimalist", "Comfort", "Home"],
-      "images": {
-        "mainImage": "/images/black-chair-main.jpeg",
-        "sideAngleImages": [
-          "/images/black-chair%20(4).jpeg",
-          "/images/black-chair%20(3).jpeg",
-          "/images/black-chair%20(2).jpeg",
-          "/images/black-chair%20(1).jpeg"
-        ]
+    "color": ["Black", "Brown"],
+    "sizes": ["L", "XL"],
+    "stock": 8,
+    "dimensions": {
+      "width": "280 cm",
+      "height": "80 cm",
+      "depth": "170 cm",
+      "weight": "50 kg",
+      "seatHeight": "42 cm",
+      "legHeight": "6 cm"
+    },
+    "material": "Genuine Leather",
+    "secondaryMaterial": "Stainless Steel",
+    "configuration": "Straight",
+    "upholsteryMaterial": "Genuine Leather",
+    "upholsteryColor": "Black",
+    "fillingMaterial": "High-Density Foam",
+    "finishType": "Glossy",
+    "originOfManufacture": "Italy",
+    "warranty": {
+      "summary": "2 Years Warranty",
+      "serviceType": "Email at support@luxurysofas.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "2 Years"
+    },
+    "reviews": [
+      {
+        "rating": 4.8,
+        "comment": "Absolutely stunning! The leather feels premium.",
+        "user": "Alice Johnson"
       },
-      "color": ["Beige", "Grey"],
-      "sizes": ["M", "L"],
-      "stock": 12,
-      "dimensions": {
-        "width": "240 cm",
-        "height": "75 cm",
-        "depth": "160 cm",
-        "weight": "40 kg",
-        "seatHeight": "40 cm",
-        "legHeight": "5 cm"
+      {
+        "rating": 4.5,
+        "comment": "Comfortable and stylish, but a bit heavy.",
+        "user": "Michael Brown"
+      }
+    ],
+    "rating": {
+      "average": 4.6,
+      "breakdown": {
+        "fiveStars": 180,
+        "fourStars": 120,
+        "threeStars": 30,
+        "twoStars": 5,
+        "oneStar": 2
+      }
+    },
+    "salesPackage": "1 Leather Sofa, 2 Cushions",
+    "modelNumber": "LSBLK001",
+    "sku": "SS002",
+    "features": [
+      "Adjustable Headrest: No",
+      "Maximum Load Capacity: 300 KG",
+      "Handmade: Yes"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS001",
+        "name": "Brown Sofa",
+        "price": 250000,
+        "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
-      "material": "Premium Fabric",
-      "secondaryMaterial": "Pine Wood",
-      "configuration": "Straight",
-      "upholsteryMaterial": "Premium Fabric",
-      "upholsteryColor": "Beige",
-      "fillingMaterial": "Memory Foam",
-      "finishType": "Matte",
-      "originOfManufacture": "India",
-      "warranty": {
-        "summary": "1 Year Warranty",
-        "serviceType": "Email at support@minimalistsofas.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to misuse",
-        "domesticWarranty": "1 Year"
-      },
-      "reviews": [
-        {
-          "rating": 4.6,
-          "comment": "Very comfortable and easy to clean.",
-          "user": "Sarah Lee"
-        },
-        {
-          "rating": 4.3,
-          "comment": "Great value for money.",
-          "user": "David Wilson"
-        }
-      ],
-      "rating": {
-        "average": 4.5,
-        "breakdown": {
-          "fiveStars": 150,
-          "fourStars": 100,
-          "threeStars": 20,
-          "twoStars": 5,
-          "oneStar": 1
-        }
-      },
-      "salesPackage": "1 Fabric Sofa, 3 Cushions",
-      "modelNumber": "FSBEG001",
-      "sku": "SS003",
-      "features": [
-        "Adjustable Headrest: No",
-        "Maximum Load Capacity: 250 KG",
-        "Handmade: Yes"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS001",
-          "name": "Brown Sofa",
-          "price": 250000,
-          "image": "/images/brown-sofa%20(1).jpeg"
-        },
-        {
-          "id": "SS002",
-          "name": "Modern Leather Sofa",
-          "price": 320000,
-          "image": "/images/bed-main.jpeg"
-        }
+      {
+        "id": "SS003",
+        "name": "Stylish Cafe Chair",
+        "price": 350000,
+        "image": "https://template-6-api.vercel.app/images/black-chair%20(1).jpeg"
+      }
+    ]
+  },
+  {
+    "_key": "SS003",
+    "id": "SS003",
+    "name": "Minimalist Fabric Sofa",
+    "description": "A simple yet elegant fabric sofa, perfect for minimalist interiors. The neutral tones and clean design make it versatile for any living space.",
+    "price": 180000,
+    "originalPrice": 200000,
+    "discount": 10.0,
+    "category": "Sofas",
+    "tags": ["Fabric", "Minimalist", "Comfort", "Home"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/black-chair-main.jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/black-chair%20(4).jpeg",
+        "https://template-6-api.vercel.app/images/black-chair%20(3).jpeg",
+        "https://template-6-api.vercel.app/images/black-chair%20(2).jpeg",
+        "https://template-6-api.vercel.app/images/black-chair%20(1).jpeg"
       ]
     },
-    {
-      "id": "SS004",
-      "name": "Outdoor Sofa Set",
-      "description": "A durable and stylish outdoor sofa set, perfect for patios and gardens. The weatherproof fabric and sturdy frame ensure long-lasting use.",
-      "price": 224000,
-      "originalPrice": 250000,
-      "discount": 10.4,
-      "category": "Outdoor Furniture",
-      "tags": ["Outdoor", "Weatherproof", "Garden", "Patio"],
-      "images": {
-        "mainImage": "/images/brown-sofa-main.jpeg",
-        "sideAngleImages": [
-          "/images/brown-sofa%20(2).jpeg",
-          "/images/brown-sofa%20(1).jpeg"
-        ]
+    "color": ["Beige", "Grey"],
+    "sizes": ["M", "L"],
+    "stock": 12,
+    "dimensions": {
+      "width": "240 cm",
+      "height": "75 cm",
+      "depth": "160 cm",
+      "weight": "40 kg",
+      "seatHeight": "40 cm",
+      "legHeight": "5 cm"
+    },
+    "material": "Premium Fabric",
+    "secondaryMaterial": "Pine Wood",
+    "configuration": "Straight",
+    "upholsteryMaterial": "Premium Fabric",
+    "upholsteryColor": "Beige",
+    "fillingMaterial": "Memory Foam",
+    "finishType": "Matte",
+    "originOfManufacture": "India",
+    "warranty": {
+      "summary": "1 Year Warranty",
+      "serviceType": "Email at support@minimalistsofas.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "1 Year"
+    },
+    "reviews": [
+      {
+        "rating": 4.6,
+        "comment": "Very comfortable and easy to clean.",
+        "user": "Sarah Lee"
       },
-      "color": ["Brown", "Beige"],
-      "sizes": ["L", "XL"],
-      "stock": 5,
-      "dimensions": {
-        "width": "300 cm",
-        "height": "85 cm",
-        "depth": "180 cm",
-        "weight": "60 kg",
-        "seatHeight": "45 cm",
-        "legHeight": "7 cm"
+      {
+        "rating": 4.3,
+        "comment": "Great value for money.",
+        "user": "David Wilson"
+      }
+    ],
+    "rating": {
+      "average": 4.5,
+      "breakdown": {
+        "fiveStars": 150,
+        "fourStars": 100,
+        "threeStars": 20,
+        "twoStars": 5,
+        "oneStar": 1
+      }
+    },
+    "salesPackage": "1 Fabric Sofa, 3 Cushions",
+    "modelNumber": "FSBEG001",
+    "sku": "SS003",
+    "features": [
+      "Adjustable Headrest: No",
+      "Maximum Load Capacity: 250 KG",
+      "Handmade: Yes"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS001",
+        "name": "Brown Sofa",
+        "price": 250000,
+        "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
-      "material": "Rattan",
-      "secondaryMaterial": "Aluminum",
-      "configuration": "L-shaped",
-      "upholsteryMaterial": "Weatherproof Fabric",
-      "upholsteryColor": "Beige",
-      "fillingMaterial": "Sponge",
-      "finishType": "Matte",
-      "originOfManufacture": "Indonesia",
-      "warranty": {
-        "summary": "1 Year Warranty",
-        "serviceType": "Email at support@outdoorfurniture.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to weather",
-        "domesticWarranty": "1 Year"
-      },
-      "reviews": [
-        {
-          "rating": 4.7,
-          "comment": "Perfect for my patio!",
-          "user": "Emily Davis"
-        },
-        {
-          "rating": 4.4,
-          "comment": "Very sturdy and comfortable.",
-          "user": "James Wilson"
-        }
-      ],
-      "rating": {
-        "average": 4.6,
-        "breakdown": {
-          "fiveStars": 170,
-          "fourStars": 110,
-          "threeStars": 15,
-          "twoStars": 3,
-          "oneStar": 2
-        }
-      },
-      "salesPackage": "1 Outdoor Sofa, 2 Chairs, 1 Table",
-      "modelNumber": "OSBRN001",
-      "sku": "SS004",
-      "features": [
-        "Weatherproof: Yes",
-        "Maximum Load Capacity: 300 KG",
-        "Handmade: No"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS001",
-          "name": "Brown Sofa",
-          "price": 250000,
-          "image": "/images/brown-sofa%20(1).jpeg"
-        },
-        {
-          "id": "SS002",
-          "name": "Modern Leather Sofa",
-          "price": 320000,
-          "image": "/images/bed-main.jpeg"
-        }
+      {
+        "id": "SS002",
+        "name": "Modern Leather Sofa",
+        "price": 320000,
+        "image": "https://template-6-api.vercel.app/images/bed-main.jpeg"
+      }
+    ]
+  },
+  {
+    "_key": "SS004",
+    "id": "SS004",
+    "name": "Outdoor Sofa Set",
+    "description": "A durable and stylish outdoor sofa set, perfect for patios and gardens. The weatherproof fabric and sturdy frame ensure long-lasting use.",
+    "price": 224000,
+    "originalPrice": 250000,
+    "discount": 10.4,
+    "category": "Outdoor Furniture",
+    "tags": ["Outdoor", "Weatherproof", "Garden", "Patio"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/brown-sofa-main.jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/brown-sofa%20(2).jpeg",
+        "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       ]
     },
-    {
-      "id": "SS005",
-      "name": "Velvet Luxury Sofa",
-      "description": "A plush velvet sofa that adds a touch of luxury to any living space. The rich texture and vibrant colors make it a statement piece.",
-      "price": 280000,
-      "originalPrice": 300000,
-      "discount": 6.67,
-      "category": "Sofas",
-      "tags": ["Velvet", "Luxury", "Comfort", "Home"],
-      "images": {
-        "mainImage": "/images/bubble-sofa-main.jpeg",
-        "sideAngleImages": [
-          "/images/bubble-sofa%20(2).jpeg",
-          "/images/bubble-sofa%20(1).jpeg"
-        ]
+    "color": ["Brown", "Beige"],
+    "sizes": ["L", "XL"],
+    "stock": 5,
+    "dimensions": {
+      "width": "300 cm",
+      "height": "85 cm",
+      "depth": "180 cm",
+      "weight": "60 kg",
+      "seatHeight": "45 cm",
+      "legHeight": "7 cm"
+    },
+    "material": "Rattan",
+    "secondaryMaterial": "Aluminum",
+    "configuration": "L-shaped",
+    "upholsteryMaterial": "Weatherproof Fabric",
+    "upholsteryColor": "Beige",
+    "fillingMaterial": "Sponge",
+    "finishType": "Matte",
+    "originOfManufacture": "Indonesia",
+    "warranty": {
+      "summary": "1 Year Warranty",
+      "serviceType": "Email at support@outdoorfurniture.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to weather",
+      "domesticWarranty": "1 Year"
+    },
+    "reviews": [
+      {
+        "rating": 4.7,
+        "comment": "Perfect for my patio!",
+        "user": "Emily Davis"
       },
-      "color": ["Emerald Green", "Royal Blue"],
-      "sizes": ["L", "XL"],
-      "stock": 7,
-      "dimensions": {
-        "width": "270 cm",
-        "height": "78 cm",
-        "depth": "165 cm",
-        "weight": "48 kg",
-        "seatHeight": "41 cm",
-        "legHeight": "6 cm"
+      {
+        "rating": 4.4,
+        "comment": "Very sturdy and comfortable.",
+        "user": "James Wilson"
+      }
+    ],
+    "rating": {
+      "average": 4.6,
+      "breakdown": {
+        "fiveStars": 170,
+        "fourStars": 110,
+        "threeStars": 15,
+        "twoStars": 3,
+        "oneStar": 2
+      }
+    },
+    "salesPackage": "1 Outdoor Sofa, 2 Chairs, 1 Table",
+    "modelNumber": "OSBRN001",
+    "sku": "SS004",
+    "features": [
+      "Weatherproof: Yes",
+      "Maximum Load Capacity: 300 KG",
+      "Handmade: No"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS001",
+        "name": "Brown Sofa",
+        "price": 250000,
+        "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
-      "material": "Velvet",
-      "secondaryMaterial": "Solid Wood",
-      "configuration": "Straight",
-      "upholsteryMaterial": "Velvet",
-      "upholsteryColor": "Emerald Green",
-      "fillingMaterial": "Memory Foam",
-      "finishType": "Matte",
-      "originOfManufacture": "France",
-      "warranty": {
-        "summary": "2 Years Warranty",
-        "serviceType": "Email at support@luxurysofas.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to misuse",
-        "domesticWarranty": "2 Years"
-      },
-      "reviews": [
-        {
-          "rating": 4.9,
-          "comment": "Absolutely luxurious! The velvet feels amazing.",
-          "user": "Olivia Taylor"
-        },
-        {
-          "rating": 4.6,
-          "comment": "Great addition to my living room.",
-          "user": "Daniel Harris"
-        }
-      ],
-      "rating": {
-        "average": 4.7,
-        "breakdown": {
-          "fiveStars": 200,
-          "fourStars": 130,
-          "threeStars": 25,
-          "twoStars": 3,
-          "oneStar": 1
-        }
-      },
-      "salesPackage": "1 Velvet Sofa, 2 Cushions",
-      "modelNumber": "VSGRN001",
-      "sku": "SS005",
-      "features": [
-        "Adjustable Headrest: No",
-        "Maximum Load Capacity: 280 KG",
-        "Handmade: Yes"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS001",
-          "name": "Brown Sofa",
-          "price": 250000,
-          "image": "/images/brown-sofa%20(1).jpeg"
-        },
-        {
-          "id": "SS002",
-          "name": "Modern Leather Sofa",
-          "price": 320000,
-          "image": "/images/bed-main.jpeg"
-        }
+      {
+        "id": "SS002",
+        "name": "Modern Leather Sofa", 
+        "price": 320000,
+        "image": "https://template-6-api.vercel.app/images/bed-main.jpeg"
+      }
+    ]
+  },
+  {
+    "_key": "SS005",
+    "id": "SS005",
+    "name": "Velvet Luxury Sofa",
+    "description": "A plush velvet sofa that adds a touch of luxury to any living space. The rich texture and vibrant colors make it a statement piece.",
+    "price": 280000,
+    "originalPrice": 300000,
+    "discount": 6.67,
+    "category": "Sofas",
+    "tags": ["Velvet", "Luxury", "Comfort", "Home"],
+    "images": { ?????? use dfeeppp seek
+      "mainImage": "https://template-6-api.vercel.app/images/bubble-sofa-main.jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/bubble-sofa%20(2).jpeg",
+        "https://template-6-api.vercel.app/images/bubble-sofa%20(1).jpeg"
       ]
     },
-    {
-      "id": "SS006",
-      "name": "Scandinavian Wooden Sofa",
-      "description": "A minimalist wooden sofa inspired by Scandinavian design. The natural wood finish and clean lines make it perfect for modern interiors.",
-      "price": 190000,
-      "originalPrice": 210000,
-      "discount": 9.52,
-      "category": "Sofas",
-      "tags": ["Wooden", "Scandinavian", "Minimalist", "Home"],
-      "images": {
-        "mainImage": "/images/flower-lamp-main.jpeg",
-        "sideAngleImages": [
-          "/images/flower-lamp%20(4).jpeg",
-          "/images/flower-lamp%20(3).jpeg",
-          "/images/flower-lamp%20(2).jpeg",
-          "/images/flower-lamp%20(1).jpeg"
-        ]
+    "color": ["Emerald Green", "Royal Blue"],
+    "sizes": ["L", "XL"],
+    "stock": 7,
+    "dimensions": {
+      "width": "270 cm",
+      "height": "78 cm",
+      "depth": "165 cm",
+      "weight": "48 kg",
+      "seatHeight": "41 cm",
+      "legHeight": "6 cm"
+    },
+    "material": "Velvet",
+    "secondaryMaterial": "Solid Wood",
+    "configuration": "Straight",
+    "upholsteryMaterial": "Velvet",
+    "upholsteryColor": "Emerald Green",
+    "fillingMaterial": "Memory Foam",
+    "finishType": "Matte",
+    "originOfManufacture": "France",
+    "warranty": {
+      "summary": "2 Years Warranty",
+      "serviceType": "Email at support@luxurysofas.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "2 Years"
+    },
+    "reviews": [
+      {
+        "rating": 4.9,
+        "comment": "Absolutely luxurious! The velvet feels amazing.",
+        "user": "Olivia Taylor"
       },
-      "color": ["Natural Wood", "Walnut"],
-      "sizes": ["M", "L"],
-      "stock": 9,
-      "dimensions": {
-        "width": "220 cm",
-        "height": "70 cm",
-        "depth": "150 cm",
-        "weight": "35 kg",
-        "seatHeight": "38 cm",
-        "legHeight": "4 cm"
+      {
+        "rating": 4.6,
+        "comment": "Great addition to my living room.",
+        "user": "Daniel Harris"
+      }
+    ],
+    "rating": {
+      "average": 4.7,
+      "breakdown": {
+        "fiveStars": 200,
+        "fourStars": 130,
+        "threeStars": 25,
+        "twoStars": 3,
+        "oneStar": 1
+      }
+    },
+    "salesPackage": "1 Velvet Sofa, 2 Cushions",
+    "modelNumber": "VSGRN001",
+    "sku": "SS005",
+    "features": [
+      "Adjustable Headrest: No",
+      "Maximum Load Capacity: 280 KG",
+      "Handmade: Yes"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS001",
+        "name": "Brown Sofa",
+        "price": 250000,
+        "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
-      "material": "Solid Wood",
-      "secondaryMaterial": "Cotton Cushions",
-      "configuration": "Straight",
-      "upholsteryMaterial": "Cotton",
-      "upholsteryColor": "Beige",
-      "fillingMaterial": "Foam",
-      "finishType": "Matte",
-      "originOfManufacture": "Sweden",
-      "warranty": {
-        "summary": "1 Year Warranty",
-        "serviceType": "Email at support@scandinavianfurniture.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to misuse",
-        "domesticWarranty": "1 Year"
-      },
-      "reviews": [
-        {
-          "rating": 4.7,
-          "comment": "Beautiful design and very sturdy.",
-          "user": "Emma Johnson"
-        },
-        {
-          "rating": 4.4,
-          "comment": "Perfect for my small apartment.",
-          "user": "Liam Smith"
-        }
-      ],
-      "rating": {
-        "average": 4.6,
-        "breakdown": {
-          "fiveStars": 160,
-          "fourStars": 110,
-          "threeStars": 20,
-          "twoStars": 4,
-          "oneStar": 1
-        }
-      },
-      "salesPackage": "1 Wooden Sofa, 2 Cushions",
-      "modelNumber": "SWNWD001",
-      "sku": "SS006",
-      "features": [
-        "Adjustable Headrest: No",
-        "Maximum Load Capacity: 250 KG",
-        "Handmade: Yes"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS001",
-          "name": "Brown Sofa",
-          "price": 250000,
-          "image": "/images/brown-sofa%20(1).jpeg"
-        },
-        {
-          "id": "SS003",
-          "name": "Minimalist Fabric Sofa",
-          "price": 180000,
-          "image": "/images/black-chair-main.jpeg"
-        }
+      {
+        "id": "SS002",
+        "name": "Modern Leather Sofa",
+        "price": 320000,
+        "image": "/images/bed-main.jpeg"
+      }
+    ]
+  },
+  {
+    "_key": "SS006",
+    "id": "SS006",
+    "name": "Scandinavian Wooden Sofa",
+    "description": "A minimalist wooden sofa inspired by Scandinavian design. The natural wood finish and clean lines make it perfect for modern interiors.",
+    "price": 190000,
+    "originalPrice": 210000,
+    "discount": 9.52,
+    "category": "Sofas",
+    "tags": ["Wooden", "Scandinavian", "Minimalist", "Home"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/flower-lamp-main.jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/flower-lamp%20(4).jpeg",
+        "https://template-6-api.vercel.app/images/flower-lamp%20(3).jpeg",
+        "https://template-6-api.vercel.app/images/flower-lamp%20(2).jpeg",
+        "https://template-6-api.vercel.app/images/flower-lamp%20(1).jpeg"
       ]
     },
-    {
-      "id": "SS007",
-      "name": "Bohemian Style Sofa",
-      "description": "A vibrant and eclectic sofa with a bohemian design. The colorful fabric and unique patterns make it a perfect addition to eclectic interiors.",
-      "price": 170000,
-      "originalPrice": 190000,
-      "discount": 10.53,
-      "category": "Sofas",
-      "tags": ["Bohemian", "Colorful", "Eclectic", "Home"],
-      "images": {
-        "mainImage": "/images/marble-table-main%20(2).jpeg",
-        "sideAngleImages": [
-          "/images/marble-table-main%20(1).jpeg",
-          "/images/marble-table-main%20(3).jpeg",
-          "/images/marble-table-main%20(4).jpeg",
-          "/images/marble-table-main%20(5).jpeg"
-        ]
+    "color": ["Natural Wood", "Walnut"],
+    "sizes": ["M", "L"],
+    "stock": 9,
+    "dimensions": {
+      "width": "220 cm",
+      "height": "70 cm",
+      "depth": "150 cm",
+      "weight": "35 kg",
+      "seatHeight": "38 cm",
+      "legHeight": "4 cm"
+    },
+    "material": "Solid Wood",
+    "secondaryMaterial": "Cotton Cushions",
+    "configuration": "Straight",
+    "upholsteryMaterial": "Cotton",
+    "upholsteryColor": "Beige",
+    "fillingMaterial": "Foam",
+    "finishType": "Matte",
+    "originOfManufacture": "Sweden",
+    "warranty": {
+      "summary": "1 Year Warranty",
+      "serviceType": "Email at support@scandinavianfurniture.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "1 Year"
+    },
+    "reviews": [
+      {
+        "rating": 4.7,
+        "comment": "Beautiful design and very sturdy.",
+        "user": "Emma Johnson"
       },
-      "color": ["Multicolor", "Teal"],
-      "sizes": ["M", "L"],
-      "stock": 10,
-      "dimensions": {
-        "width": "230 cm",
-        "height": "75 cm",
-        "depth": "155 cm",
-        "weight": "42 kg",
-        "seatHeight": "39 cm",
-        "legHeight": "5 cm"
+      {
+        "rating": 4.4,
+        "comment": "Perfect for my small apartment.",
+        "user": "Liam Smith"
+      }
+    ],
+    "rating": {
+      "average": 4.6,
+      "breakdown": {
+        "fiveStars": 160,
+        "fourStars": 110,
+        "threeStars": 20,
+        "twoStars": 4,
+        "oneStar": 1
+      }
+    },
+    "salesPackage": "1 Wooden Sofa, 2 Cushions",
+    "modelNumber": "SWNWD001",
+    "sku": "SS006",
+    "features": [
+      "Adjustable Headrest: No",
+      "Maximum Load Capacity: 250 KG",
+      "Handmade: Yes"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS001",
+        "name": "Brown Sofa",
+        "price": 250000,
+        "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
-      "material": "Fabric",
-      "secondaryMaterial": "Wood",
-      "configuration": "Straight",
-      "upholsteryMaterial": "Fabric",
-      "upholsteryColor": "Multicolor",
-      "fillingMaterial": "Foam",
-      "finishType": "Matte",
-      "originOfManufacture": "India",
-      "warranty": {
-        "summary": "1 Year Warranty",
-        "serviceType": "Email at support@bohemianfurniture.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to misuse",
-        "domesticWarranty": "1 Year"
-      },
-      "reviews": [
-        {
-          "rating": 4.6,
-          "comment": "Love the colors! Very comfortable.",
-          "user": "Sophia Martinez"
-        },
-        {
-          "rating": 4.3,
-          "comment": "Great for a cozy living room.",
-          "user": "Ethan Garcia"
-        }
-      ],
-      "rating": {
-        "average": 4.5,
-        "breakdown": {
-          "fiveStars": 140,
-          "fourStars": 100,
-          "threeStars": 20,
-          "twoStars": 5,
-          "oneStar": 1
-        }
-      },
-      "salesPackage": "1 Bohemian Sofa, 3 Cushions",
-      "modelNumber": "BSMCL001",
-      "sku": "SS007",
-      "features": [
-        "Adjustable Headrest: No",
-        "Maximum Load Capacity: 250 KG",
-        "Handmade: Yes"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS003",
-          "name": "Minimalist Fabric Sofa",
-          "price": 180000,
-          "image": "/images/black-chair-main.jpeg"
-        },
-        {
-          "id": "SS005",
-          "name": "Velvet Luxury Sofa",
-          "price": 280000,
-          "image": "/images/bubble-sofa-main.jpeg"
-        }
+      {
+        "id": "SS003",
+        "name": "Minimalist Fabric Sofa",
+        "price": 180000,
+        "image": "https://template-6-api.vercel.app/images/black-chair-main.jpeg"
+      }
+    ]
+  },
+  {
+    "_key": "SS007",
+    "id": "SS007",
+    "name": "Bohemian Style Sofa",
+    "description": "A vibrant and eclectic sofa with a bohemian design. The colorful fabric and unique patterns make it a perfect addition to eclectic interiors.",
+    "price": 170000,
+    "originalPrice": 190000,
+    "discount": 10.53,
+    "category": "Sofas",
+    "tags": ["Bohemian", "Colorful", "Eclectic", "Home"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/marble-table-main%20(2).jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/marble-table-main%20(1).jpeg",
+        "https://template-6-api.vercel.app/images/marble-table-main%20(3).jpeg",
+        "https://template-6-api.vercel.app/images/marble-table-main%20(4).jpeg",
+        "https://template-6-api.vercel.app/images/marble-table-main%20(5).jpeg"
       ]
     },
-    {
-      "id": "SS008",
-      "name": "Mid-Century Modern Sofa",
-      "description": "A timeless mid-century modern sofa with clean lines and elegant design. The mustard yellow upholstery adds a retro touch to any space.",
-      "price": 240000,
-      "originalPrice": 260000,
-      "discount": 7.69,
-      "category": "Sofas",
-      "tags": ["Mid-Century", "Modern", "Retro", "Home"],
-      "images": {
-        "mainImage": "/images/mirrors-main.jpeg",
-        "sideAngleImages": [
-          "/images/mirrors%20(4).jpeg",
-          "/images/mirrors%20(3).jpeg",
-          "/images/mirrors%20(2).jpeg",
-          "/images/mirrors%20(1).jpeg"
-        ]
+    "color": ["Multicolor", "Teal"],
+    "sizes": ["M", "L"],
+    "stock": 10,
+    "dimensions": {
+      "width": "230 cm",
+      "height": "75 cm",
+      "depth": "155 cm",
+      "weight": "42 kg",
+      "seatHeight": "39 cm",
+      "legHeight": "5 cm"
+    },
+    "material": "Fabric",
+    "secondaryMaterial": "Wood",
+    "configuration": "Straight",
+    "upholsteryMaterial": "Fabric",
+    "upholsteryColor": "Multicolor",
+    "fillingMaterial": "Foam",
+    "finishType": "Matte",
+    "originOfManufacture": "India",
+    "warranty": {
+      "summary": "1 Year Warranty",
+      "serviceType": "Email at support@bohemianfurniture.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "1 Year"
+    },
+    "reviews": [
+      {
+        "rating": 4.6,
+        "comment": "Love the colors! Very comfortable.",
+        "user": "Sophia Martinez"
       },
-      "color": ["Mustard Yellow", "Dark Brown"],
-      "sizes": ["L", "XL"],
-      "stock": 7,
-      "dimensions": {
-        "width": "260 cm",
-        "height": "77 cm",
-        "depth": "165 cm",
-        "weight": "47 kg",
-        "seatHeight": "40 cm",
-        "legHeight": "6 cm"
+      {
+        "rating": 4.3,
+        "comment": "Great for a cozy living room.",
+        "user": "Ethan Garcia"
+      }
+    ],
+    "rating": {
+      "average": 4.5,
+      "breakdown": {
+        "fiveStars": 140,
+        "fourStars": 100,
+        "threeStars": 20,
+        "twoStars": 5,
+        "oneStar": 1
+      }
+    },
+    "salesPackage": "1 Bohemian Sofa, 3 Cushions",
+    "modelNumber": "BSMCL001",
+    "sku": "SS007",
+    "features": [
+      "Adjustable Headrest: No",
+      "Maximum Load Capacity: 250 KG",
+      "Handmade: Yes"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS003",
+        "name": "Minimalist Fabric Sofa",
+        "price": 180000,
+        "image": "https://template-6-api.vercel.app/images/black-chair-main.jpeg"
       },
-      "material": "Wood and Fabric",
-      "secondaryMaterial": "Metal",
-      "configuration": "Straight",
-      "upholsteryMaterial": "Fabric",
-      "upholsteryColor": "Mustard Yellow",
-      "fillingMaterial": "Foam",
-      "finishType": "Matte",
-      "originOfManufacture": "USA",
-      "warranty": {
-        "summary": "2 Years Warranty",
-        "serviceType": "Email at support@midcenturyfurniture.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to misuse",
-        "domesticWarranty": "2 Years"
-      },
-      "reviews": [
-        {
-          "rating": 4.9,
-          "comment": "Absolutely stunning! Fits perfectly in my retro-themed living room.",
-          "user": "Mia Anderson"
-        },
-        {
-          "rating": 4.6,
-          "comment": "Very comfortable and stylish.",
-          "user": "Lucas Thomas"
-        }
-      ],
-      "rating": {
-        "average": 4.7,
-        "breakdown": {
-          "fiveStars": 190,
-          "fourStars": 130,
-          "threeStars": 25,
-          "twoStars": 3,
-          "oneStar": 2
-        }
-      },
-      "salesPackage": "1 Mid-Century Sofa, 2 Cushions",
-      "modelNumber": "MCMYL001",
-      "sku": "SS008",
-      "features": [
-        "Adjustable Headrest: No",
-        "Maximum Load Capacity: 280 KG",
-        "Handmade: Yes"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS002",
-          "name": "Modern Leather Sofa",
-          "price": 320000,
-          "image": "/images/bed-main.jpeg"
-        },
-        {
-          "id": "SS006",
-          "name": "Scandinavian Wooden Sofa",
-          "price": 190000,
-          "image": "/images/flower-lamp-main.jpeg"
-        }
+      {
+        "id": "SS005",
+        "name": "Velvet Luxury Sofa",
+        "price": 280000,
+        "image": "https://template-6-api.vercel.app/images/bubble-sofa-main.jpeg"
+      }
+    ]
+  },
+  {
+    "_key": "SS008",
+    "id": "SS008",
+    "name": "Mid-Century Modern Sofa",
+    "description": "A timeless mid-century modern sofa with clean lines and elegant design. The mustard yellow upholstery adds a retro touch to any space.",
+    "price": 240000,
+    "originalPrice": 260000,
+    "discount": 7.69,
+    "category": "Sofas",
+    "tags": ["Mid-Century", "Modern", "Retro", "Home"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/mirrors-main.jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/mirrors%20(4).jpeg",
+        "https://template-6-api.vercel.app/images/mirrors%20(3).jpeg",
+        "https://template-6-api.vercel.app/images/mirrors%20(2).jpeg",
+        "https://template-6-api.vercel.app/images/mirrors%20(1).jpeg"
       ]
     },
-    {
-      "id": "SS009",
-      "name": "Convertible Sleeper Sofa",
-      "description": "A versatile sofa that converts into a comfortable bed. The charcoal grey fabric and sturdy frame make it perfect for small spaces and guest rooms.",
-      "price": 270000,
-      "originalPrice": 300000,
-      "discount": 10.0,
-      "category": "Sofas",
-      "tags": ["Convertible", "Sleeper", "Multi-functional", "Home"],
-      "images": {
-        "mainImage": "/images/old-lamp-main.jpeg",
-        "sideAngleImages": [
-          "/images/old-lamp%20(5).jpeg",
-          "/images/old-lamp%20(3).jpeg",
-          "/images/old-lamp%20(2).jpeg",
-          "/images/old-lamp%20(1).jpeg"
-        ]
+    "color": ["Mustard Yellow", "Dark Brown"],
+    "sizes": ["L", "XL"],
+    "stock": 7,
+    "dimensions": {
+      "width": "260 cm",
+      "height": "77 cm",
+      "depth": "165 cm",
+      "weight": "47 kg",
+      "seatHeight": "40 cm",
+      "legHeight": "6 cm"
+    },
+    "material": "Wood and Fabric",
+    "secondaryMaterial": "Metal",
+    "configuration": "Straight",
+    "upholsteryMaterial": "Fabric",
+    "upholsteryColor": "Mustard Yellow",
+    "fillingMaterial": "Foam",
+    "finishType": "Matte",
+    "originOfManufacture": "USA",
+    "warranty": {
+      "summary": "2 Years Warranty",
+      "serviceType": "Email at support@midcenturyfurniture.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "2 Years"
+    },
+    "reviews": [
+      {
+        "rating": 4.9,
+        "comment": "Absolutely stunning! Fits perfectly in my retro-themed living room.",
+        "user": "Mia Anderson"
       },
-      "color": ["Charcoal Grey", "Navy Blue"],
-      "sizes": ["L", "XL"],
-      "stock": 8,
-      "dimensions": {
-        "width": "280 cm",
-        "height": "85 cm",
-        "depth": "170 cm",
-        "weight": "60 kg",
-        "seatHeight": "42 cm",
-        "legHeight": "6 cm"
+      {
+        "rating": 4.6,
+        "comment": "Very comfortable and stylish.",
+        "user": "Lucas Thomas"
+      }
+    ],
+    "rating": {
+      "average": 4.7,
+      "breakdown": {
+        "fiveStars": 190,
+        "fourStars": 130,
+        "threeStars": 25,
+        "twoStars": 3,
+        "oneStar": 2
+      }
+    },
+    "salesPackage": "1 Mid-Century Sofa, 2 Cushions",
+    "modelNumber": "MCMYL001",
+    "sku": "SS008",
+    "features": [
+      "Adjustable Headrest: No",
+      "Maximum Load Capacity: 280 KG",
+      "Handmade: Yes"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS002",
+        "name": "Modern Leather Sofa",
+        "price": 320000,
+        "image": "https://template-6-api.vercel.app/images/bed-main.jpeg"
       },
-      "material": "Fabric",
-      "secondaryMaterial": "Metal Frame",
-      "configuration": "Convertible",
-      "upholsteryMaterial": "Fabric",
-      "upholsteryColor": "Charcoal Grey",
-      "fillingMaterial": "Memory Foam",
-      "finishType": "Matte",
-      "originOfManufacture": "China",
-      "warranty": {
-        "summary": "2 Years Warranty",
-        "serviceType": "Email at support@multifunctionalsofas.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to misuse",
-        "domesticWarranty": "2 Years"
-      },
-      "reviews": [
-        {
-          "rating": 4.8,
-          "comment": "Very comfortable as both a sofa and a bed.",
-          "user": "Olivia Clark"
-        },
-        {
-          "rating": 4.5,
-          "comment": "Great for small apartments.",
-          "user": "James White"
-        }
-      ],
-      "rating": {
-        "average": 4.7,
-        "breakdown": {
-          "fiveStars": 170,
-          "fourStars": 120,
-          "threeStars": 25,
-          "twoStars": 3,
-          "oneStar": 2
-        }
-      },
-      "salesPackage": "1 Convertible Sofa, 2 Pillows",
-      "modelNumber": "CSSGR001",
-      "sku": "SS009",
-      "features": [
-        "Adjustable Headrest: Yes",
-        "Maximum Load Capacity: 300 KG",
-        "Handmade: No"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS001",
-          "name": "Brown Sofa",
-          "price": 250000,
-          "image": "/images/brown-sofa%20(1).jpeg"
-        },
-        {
-          "id": "SS003",
-          "name": "Minimalist Fabric Sofa",
-          "price": 180000,
-          "image": "/images/black-chair-main.jpeg"
-        }
+      {
+        "id": "SS006",
+        "name": "Scandinavian Wooden Sofa",
+        "price": 190000,
+        "image": "https://template-6-api.vercel.app/images/flower-lamp-main.jpeg"
+      }
+    ]
+  },
+  {
+    "_key": "SS009",
+    "id": "SS009",
+    "name": "Convertible Sleeper Sofa",
+    "description": "A versatile sofa that converts into a comfortable bed. The charcoal grey fabric and sturdy frame make it perfect for small spaces and guest rooms.",
+    "price": 270000,
+    "originalPrice": 300000,
+    "discount": 10.0,
+    "category": "Sofas",
+    "tags": ["Convertible", "Sleeper", "Multi-functional", "Home"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/old-lamp-main.jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/old-lamp%20(5).jpeg",
+        "https://template-6-api.vercel.app/images/old-lamp%20(3).jpeg",
+        "https://template-6-api.vercel.app/images/old-lamp%20(2).jpeg",
+        "https://template-6-api.vercel.app/images/old-lamp%20(1).jpeg"
       ]
     },
-    {
-      "id": "SS010",
-      "name": "Luxury Recliner Sofa",
-      "description": "A premium recliner sofa with built-in massage and heating functions. The black leather upholstery and sleek design make it a luxurious addition to any home.",
-      "price": 350000,
-      "originalPrice": 380000,
-      "discount": 7.89,
-      "category": "Sofas",
-      "tags": ["Recliner", "Luxury", "Massage", "Home"],
-      "images": {
-        "mainImage": "/images/round-table-main.jpeg",
-        "sideAngleImages": [
-          "/images/round-table%20(3).jpeg",
-          "/images/round-table%20(2).jpeg",
-          "/images/round-table%20(1).jpg"
-        ]
+    "color": ["Charcoal Grey", "Navy Blue"],
+    "sizes": ["L", "XL"],
+    "stock": 8,
+    "dimensions": {
+      "width": "280 cm",
+      "height": "85 cm",
+      "depth": "170 cm",
+      "weight": "60 kg",
+      "seatHeight": "42 cm",
+      "legHeight": "6 cm"
+    },
+    "material": "Fabric",
+    "secondaryMaterial": "Metal Frame",
+    "configuration": "Convertible",
+    "upholsteryMaterial": "Fabric",
+    "upholsteryColor": "Charcoal Grey",
+    "fillingMaterial": "Memory Foam",
+    "finishType": "Matte",
+    "originOfManufacture": "China",
+    "warranty": {
+      "summary": "2 Years Warranty",
+      "serviceType": "Email at support@multifunctionalsofas.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "2 Years"
+    },
+    "reviews": [
+      {
+        "rating": 4.8,
+        "comment": "Very comfortable as both a sofa and a bed.",
+        "user": "Olivia Clark"
       },
-      "color": ["Black", "Brown"],
-      "sizes": ["L", "XL"],
-      "stock": 5,
-      "dimensions": {
-        "width": "290 cm",
-        "height": "90 cm",
-        "depth": "180 cm",
-        "weight": "70 kg",
-        "seatHeight": "45 cm",
-        "legHeight": "7 cm"
+      {
+        "rating": 4.5,
+        "comment": "Great for small apartments.",
+        "user": "James White"
+      }
+    ],
+    "rating": {
+      "average": 4.7,
+      "breakdown": {
+        "fiveStars": 170,
+        "fourStars": 120,
+        "threeStars": 25,
+        "twoStars": 3,
+        "oneStar": 2
+      }
+    },
+    "salesPackage": "1 Convertible Sofa, 2 Pillows",
+    "modelNumber": "CSSGR001",
+    "sku": "SS009",
+    "features": [
+      "Adjustable Headrest: Yes",
+      "Maximum Load Capacity: 300 KG",
+      "Handmade: No"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS001",
+        "name": "Brown Sofa",
+        "price": 250000,
+        "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
-      "material": "Leather",
-      "secondaryMaterial": "Metal Frame",
-      "configuration": "Recliner",
-      "upholsteryMaterial": "Leather",
-      "upholsteryColor": "Black",
-      "fillingMaterial": "Memory Foam",
-      "finishType": "Glossy",
-      "originOfManufacture": "USA",
-      "warranty": {
-        "summary": "3 Years Warranty",
-        "serviceType": "Email at support@luxuryrecliners.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to misuse",
-        "domesticWarranty": "3 Years"
-      },
-      "reviews": [
-        {
-          "rating": 4.9,
-          "comment": "The massage function is amazing!",
-          "user": "Sophia Lee"
-        },
-        {
-          "rating": 4.7,
-          "comment": "Very comfortable and luxurious.",
-          "user": "Daniel Harris"
-        }
-      ],
-      "rating": {
-        "average": 4.8,
-        "breakdown": {
-          "fiveStars": 200,
-          "fourStars": 130,
-          "threeStars": 20,
-          "twoStars": 2,
-          "oneStar": 1
-        }
-      },
-      "salesPackage": "1 Recliner Sofa, 1 Remote Control",
-      "modelNumber": "LRSBL001",
-      "sku": "SS010",
-      "features": [
-        "Adjustable Headrest: Yes",
-        "Massage Function: Yes",
-        "Heating Function: Yes",
-        "Maximum Load Capacity: 350 KG",
-        "Handmade: Yes"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS002",
-          "name": "Modern Leather Sofa",
-          "price": 320000,
-          "image": "/images/bed-main.jpeg"
-        },
-        {
-          "id": "SS005",
-          "name": "Velvet Luxury Sofa",
-          "price": 280000,
-          "image": "/images/bubble-sofa-main.jpeg"
-        }
+      {
+        "id": "SS003",
+        "name": "Minimalist Fabric Sofa",
+        "price": 180000,
+        "image": "https://template-6-api.vercel.app/images/black-chair-main.jpeg"
+      }
+    ]
+  },
+  {
+    "_key": "SS010",
+    "id": "SS010",
+    "name": "Luxury Recliner Sofa",
+    "description": "A premium recliner sofa with built-in massage and heating functions. The black leather upholstery and sleek design make it a luxurious addition to any home.",
+    "price": 350000,
+    "originalPrice": 380000,
+    "discount": 7.89,
+    "category": "Sofas",
+    "tags": ["Recliner", "Luxury", "Massage", "Home"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/round-table-main.jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/round-table%20(3).jpeg",
+        "https://template-6-api.vercel.app/images/round-table%20(2).jpeg",
+        "https://template-6-api.vercel.app/images/round-table%20(1).jpg"
       ]
     },
-    {
-      "id": "SS011",
-      "name": "Kids' Play Sofa",
-      "description": "A fun and colorful sofa designed for kids. The durable plastic frame and easy-to-clean fabric make it perfect for playrooms.",
-      "price": 120000,
-      "originalPrice": 140000,
-      "discount": 14.29,
-      "category": "Kids' Furniture",
-      "tags": ["Kids", "Play", "Colorful", "Home"],
-      "images": {
-        "mainImage": "/images/white-sofa-main.jpeg",
-        "sideAngleImages": [
-          "/images/white-sofa%20(2).jpeg",
-          "/images/white-sofa%20(3).jpeg",
-          "/images/white-sofa%20(4).jpeg",
-          "/images/white-sofa%20(5).jpeg"
-        ]
+    "color": ["Black", "Brown"],
+    "sizes": ["L", "XL"],
+    "stock": 5,
+    "dimensions": {
+      "width": "290 cm",
+      "height": "90 cm",
+      "depth": "180 cm",
+      "weight": "70 kg",
+      "seatHeight": "45 cm",
+      "legHeight": "7 cm"
+    },
+    "material": "Leather",
+    "secondaryMaterial": "Metal Frame",
+    "configuration": "Recliner",
+    "upholsteryMaterial": "Leather",
+    "upholsteryColor": "Black",
+    "fillingMaterial": "Memory Foam",
+    "finishType": "Glossy",
+    "originOfManufacture": "USA",
+    "warranty": {
+      "summary": "3 Years Warranty",
+      "serviceType": "Email at support@luxuryrecliners.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "3 Years"
+    },
+    "reviews": [
+      {
+        "rating": 4.9,
+        "comment": "The massage function is amazing!",
+        "user": "Sophia Lee"
       },
-      "color": ["Blue", "Pink"],
-      "sizes": ["S", "M"],
-      "stock": 12,
-      "dimensions": {
-        "width": "150 cm",
-        "height": "50 cm",
-        "depth": "100 cm",
-        "weight": "20 kg",
-        "seatHeight": "30 cm",
-        "legHeight": "4 cm"
+      {
+        "rating": 4.7,
+        "comment": "Very comfortable and luxurious.",
+        "user": "Daniel Harris"
+      }
+    ],
+    "rating": {
+      "average": 4.8,
+      "breakdown": {
+        "fiveStars": 200,
+        "fourStars": 130,
+        "threeStars": 20,
+        "twoStars": 2,
+        "oneStar": 1
+      }
+    },
+    "salesPackage": "1 Recliner Sofa, 1 Remote Control",
+    "modelNumber": "LRSBL001",
+    "sku": "SS010",
+    "features": [
+      "Adjustable Headrest: Yes",
+      "Massage Function: Yes",
+      "Heating Function: Yes",
+      "Maximum Load Capacity: 350 KG",
+      "Handmade: Yes"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS002",
+        "name": "Modern Leather Sofa",
+        "price": 320000,
+        "image": "https://template-6-api.vercel.app/images/bed-main.jpeg"
       },
-      "material": "Plastic",
-      "secondaryMaterial": "Fabric",
-      "configuration": "Straight",
-      "upholsteryMaterial": "Fabric",
-      "upholsteryColor": "Blue",
-      "fillingMaterial": "Foam",
-      "finishType": "Matte",
-      "originOfManufacture": "China",
-      "warranty": {
-        "summary": "1 Year Warranty",
-        "serviceType": "Email at support@kidsfurniture.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to misuse",
-        "domesticWarranty": "1 Year"
-      },
-      "reviews": [
-        {
-          "rating": 4.6,
-          "comment": "My kids love it! Very durable.",
-          "user": "Emily Davis"
-        },
-        {
-          "rating": 4.3,
-          "comment": "Easy to clean and assemble.",
-          "user": "Michael Brown"
-        }
-      ],
-      "rating": {
-        "average": 4.5,
-        "breakdown": {
-          "fiveStars": 130,
-          "fourStars": 90,
-          "threeStars": 20,
-          "twoStars": 5,
-          "oneStar": 1
-        }
-      },
-      "salesPackage": "1 Kids' Sofa, 2 Cushions",
-      "modelNumber": "KPSBL001",
-      "sku": "SS011",
-      "features": [
-        "Adjustable Headrest: No",
-        "Maximum Load Capacity: 100 KG",
-        "Handmade: No"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS001",
-          "name": "Brown Sofa",
-          "price": 250000,
-          "image": "/images/brown-sofa%20(1).jpeg"
-        },
-        {
-          "id": "SS003",
-          "name": "Minimalist Fabric Sofa",
-          "price": 180000,
-          "image": "/images/black-chair-main.jpeg"
-        }
+      {
+        "id": "SS005",
+        "name": "Velvet Luxury Sofa",
+        "price": 280000,
+        "image": "https://template-6-api.vercel.app/images/bubble-sofa-main.jpeg"
+      }
+    ]
+  },
+  {
+    "_key": "SS011",
+    "id": "SS011",
+    "name": "Kids' Play Sofa",
+    "description": "A fun and colorful sofa designed for kids. The durable plastic frame and easy-to-clean fabric make it perfect for playrooms.",
+    "price": 120000,
+    "originalPrice": 140000,
+    "discount": 14.29,
+    "category": "Kids' Furniture",
+    "tags": ["Kids", "Play", "Colorful", "Home"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/white-sofa-main.jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/white-sofa%20(2).jpeg",
+        "https://template-6-api.vercel.app/images/white-sofa%20(3).jpeg",
+        "https://template-6-api.vercel.app/images/white-sofa%20(4).jpeg",
+        "https://template-6-api.vercel.app/images/white-sofa%20(5).jpeg"
       ]
     },
-    {
-      "id": "SS012",
-      "name": "Vintage Chesterfield Sofa",
-      "description": "A classic Chesterfield sofa with tufted leather and rolled arms. The rich brown leather and timeless design make it a luxurious addition to any home.",
-      "price": 400000,
-      "originalPrice": 450000,
-      "discount": 11.11,
-      "category": "Sofas",
-      "tags": ["Vintage", "Chesterfield", "Leather", "Home"],
-      "images": {
-        "mainImage": "/images/white-chair-main.jpeg",
-        "sideAngleImages": [
-          "/images/white-chair%20(1).jpeg",
-          "/images/white-chair%20(3).jpeg",
-          "/images/white-chair%20(4).jpeg",
-          "/images/white-chair%20(5).jpeg"
-        ]
+    "color": ["Blue", "Pink"],
+    "sizes": ["S", "M"],
+    "stock": 12,
+    "dimensions": {
+      "width": "150 cm",
+      "height": "50 cm",
+      "depth": "100 cm",
+      "weight": "20 kg",
+      "seatHeight": "30 cm",
+      "legHeight": "4 cm"
+    },
+    "material": "Plastic",
+    "secondaryMaterial": "Fabric",
+    "configuration": "Straight",
+    "upholsteryMaterial": "Fabric",
+    "upholsteryColor": "Blue",
+    "fillingMaterial": "Foam",
+    "finishType": "Matte",
+    "originOfManufacture": "China",
+    "warranty": {
+      "summary": "1 Year Warranty",
+      "serviceType": "Email at support@kidsfurniture.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "1 Year"
+    },
+    "reviews": [
+      {
+        "rating": 4.6,
+        "comment": "My kids love it! Very durable.",
+        "user": "Emily Davis"
       },
-      "color": ["Brown", "Burgundy"],
-      "sizes": ["L", "XL"],
-      "stock": 4,
-      "dimensions": {
-        "width": "300 cm",
-        "height": "85 cm",
-        "depth": "175 cm",
-        "weight": "65 kg",
-        "seatHeight": "43 cm",
-        "legHeight": "6 cm"
+      {
+        "rating": 4.3,
+        "comment": "Easy to clean and assemble.",
+        "user": "Michael Brown"
+      }
+    ],
+    "rating": {
+      "average": 4.5,
+      "breakdown": {
+        "fiveStars": 130,
+        "fourStars": 90,
+        "threeStars": 20,
+        "twoStars": 5,
+        "oneStar": 1
+      }
+    },
+    "salesPackage": "1 Kids' Sofa, 2 Cushions",
+    "modelNumber": "KPSBL001",
+    "sku": "SS011",
+    "features": [
+      "Adjustable Headrest: No",
+      "Maximum Load Capacity: 100 KG",
+      "Handmade: No"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS001",
+        "name": "Brown Sofa",
+        "price": 250000,
+        "image": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
       },
-      "material": "Leather",
-      "secondaryMaterial": "Wood",
-      "configuration": "Straight",
-      "upholsteryMaterial": "Leather",
-      "upholsteryColor": "Brown",
-      "fillingMaterial": "High-Density Foam",
-      "finishType": "Glossy",
-      "originOfManufacture": "UK",
-      "warranty": {
-        "summary": "2 Years Warranty",
-        "serviceType": "Email at support@vintagefurniture.com for claims",
-        "covered": "Manufacturing defects",
-        "notCovered": "Damage due to misuse",
-        "domesticWarranty": "2 Years"
-      },
-      "reviews": [
-        {
-          "rating": 4.9,
-          "comment": "Absolutely stunning! Adds a vintage charm to my living room.",
-          "user": "Olivia Taylor"
-        },
-        {
-          "rating": 4.7,
-          "comment": "Very comfortable and luxurious.",
-          "user": "Daniel Harris"
-        }
-      ],
-      "rating": {
-        "average": 4.8,
-        "breakdown": {
-          "fiveStars": 190,
-          "fourStars": 120,
-          "threeStars": 15,
-          "twoStars": 2,
-          "oneStar": 1
-        }
-      },
-      "salesPackage": "1 Chesterfield Sofa, 2 Cushions",
-      "modelNumber": "VCSBR001",
-      "sku": "SS012",
-      "features": [
-        "Adjustable Headrest: No",
-        "Maximum Load Capacity: 350 KG",
-        "Handmade: Yes"
-      ],
-      "relatedProducts": [
-        {
-          "id": "SS002",
-          "name": "Modern Leather Sofa",
-          "price": 320000,
-          "image": "/images/bed-main.jpeg"
-        },
-        {
-          "id": "SS005",
-          "name": "Velvet Luxury Sofa",
-          "price": 280000,
-          "image": "/images/bubble-sofa-main.jpeg"
-        }
+      {
+        "id": "SS003",
+        "name": "Minimalist Fabric Sofa",
+        "price": 180000,
+        "image": "https://template-6-api.vercel.app/images/black-chair-main.jpeg"
+      }
+    ]
+  },
+  {
+    "_key": "SS012",
+    "id": "SS012",
+    "name": "Vintage Chesterfield Sofa",
+    "description": "A classic Chesterfield sofa with tufted leather and rolled arms. The rich brown leather and timeless design make it a luxurious addition to any home.",
+    "price": 400000,
+    "originalPrice": 450000,
+    "discount": 11.11,
+    "category": "Sofas",
+    "tags": ["Vintage", "Chesterfield", "Leather", "Home"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/white-chair-main.jpeg",
+      "sideAngleImages": [
+        "https://template-6-api.vercel.app/images/white-chair%20(1).jpeg",
+        "https://template-6-api.vercel.app/images/white-chair%20(3).jpeg",
+        "https://template-6-api.vercel.app/images/white-chair%20(4).jpeg",
+        "https://template-6-api.vercel.app/images/white-chair%20(5).jpeg"
       ]
-    }
-  ]
+    },
+    "color": ["Brown", "Burgundy"],
+    "sizes": ["L", "XL"],
+    "stock": 4,
+    "dimensions": {
+      "width": "300 cm",
+      "height": "85 cm",
+      "depth": "175 cm",
+      "weight": "65 kg",
+      "seatHeight": "43 cm",
+      "legHeight": "6 cm"
+    },
+    "material": "Leather",
+    "secondaryMaterial": "Wood",
+    "configuration": "Straight",
+    "upholsteryMaterial": "Leather",
+    "upholsteryColor": "Brown",
+    "fillingMaterial": "High-Density Foam",
+    "finishType": "Glossy",
+    "originOfManufacture": "UK",
+    "warranty": {
+      "summary": "2 Years Warranty",
+      "serviceType": "Email at support@vintagefurniture.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "2 Years"
+    },
+    "reviews": [
+      {
+        "rating": 4.9,
+        "comment": "Absolutely stunning! Adds a vintage charm to my living room.",
+        "user": "Olivia Taylor"
+      },
+      {
+        "rating": 4.7,
+        "comment": "Very comfortable and luxurious.",
+        "user": "Daniel Harris"
+      }
+    ],
+    "rating": {
+      "average": 4.8,
+      "breakdown": {
+        "fiveStars": 190,
+        "fourStars": 120,
+        "threeStars": 15,
+        "twoStars": 2,
+        "oneStar": 1
+      }
+    },
+    "salesPackage": "1 Chesterfield Sofa, 2 Cushions",
+    "modelNumber": "VCSBR001",
+    "sku": "SS012",
+    "features": [
+      "Adjustable Headrest: No",
+      "Maximum Load Capacity: 350 KG",
+      "Handmade: Yes"
+    ],
+    "relatedProducts": [
+      {
+        "id": "SS002",
+        "name": "Modern Leather Sofa",
+        "price": 320000,
+        "image": "https://template-6-api.vercel.app/images/bed-main.jpeg"
+      },
+      {
+        "id": "SS005",
+        "name": "Velvet Luxury Sofa",
+        "price": 280000,
+        "image": "https://template-6-api.vercel.app/images/bubble-sofa-main.jpeg"
+      }
+    ]
+  }
+]
