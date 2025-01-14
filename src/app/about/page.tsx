@@ -2,7 +2,7 @@
 
 import Image from 'next/image';
 import { Marcellus } from 'next/font/google';
-import collage from '../../../public/images/purple-profile-transformed-transformed.jpeg';
+import collage from '../../../public/purple-profile-transformed-transformed.jpeg';
 import { motion } from 'framer-motion';
 import { Youtube, Linkedin, Github } from 'lucide-react';
 

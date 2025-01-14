@@ -1,332 +1,365 @@
-'use client';
+"use client";
 
-import Link from 'next/link';
-import { motion } from 'framer-motion';
-import { Marcellus } from 'next/font/google';
-
-interface SectionProps {
-  title: string;
-  children: React.ReactNode;
-}
-
-interface EndpointProps {
-  title: string;
-  method: string;
-  path: string;
-  responseFields: { name: string; description: string }[];
-  exampleResponse: string;
-}
-
-interface CodeExampleProps {
-  title: string;
-  code: string;
-}
-
-interface ErrorCodeProps {
-  code: string;
-  description: string;
-}
+import React, { useState } from "react";
+import { motion } from "framer-motion";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
+import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
+import { Marcellus } from "next/font/google";
 
 const marcellus = Marcellus({
-  weight: ['400'],
-  subsets: ['latin'],
-  display: 'swap',
+  subsets: ["latin"],
+  weight: ["400"],
+  variable: "--font-marcellus",
 });
 
-const DocsPage = () => {
+const endpoints = [
+  {
+    title: "Get All Products",
+    method: "GET",
+    path: "/api/products",
+    description: "Retrieve a list of all products in the catalog.",
+    responseFields: [
+      { name: "id", description: "Unique product identifier" },
+      { name: "name", description: "Product name" },
+      { name: "description", description: "Detailed product description" },
+      { name: "price", description: "Current price (in paise/cents)" },
+      { name: "originalPrice", description: "Original price before discount" },
+      { name: "discount", description: "Discount percentage" },
+      { name: "category", description: "Product category" },
+      { name: "tags", description: "Array of product tags" },
+      { name: "images", description: "Object containing image URLs" },
+      { name: "color", description: "Available colors" },
+      { name: "sizes", description: "Available sizes" },
+      { name: "stock", description: "Current stock count" },
+      { name: "dimensions", description: "Product dimensions" },
+      { name: "material", description: "Primary material used" },
+      { name: "secondaryMaterial", description: "Secondary material used" },
+      { name: "configuration", description: "Product configuration" },
+      { name: "upholsteryMaterial", description: "Upholstery material" },
+      { name: "upholsteryColor", description: "Upholstery color" },
+      { name: "fillingMaterial", description: "Filling material" },
+      { name: "finishType", description: "Finish type" },
+      { name: "originOfManufacture", description: "Origin of manufacture" },
+      { name: "warranty", description: "Warranty details" },
+      { name: "rating", description: "Product rating details" },
+      { name: "salesPackage", description: "Items included in sales package" },
+      { name: "modelNumber", description: "Product model number" },
+      { name: "sku", description: "Stock Keeping Unit" },
+      { name: "features", description: "Array of product features" },
+    ],
+    exampleResponse: `[
+  {
+    "id": "SS002",
+    "name": "Modern Leather Sofa",
+    "description": "A sleek and luxurious leather sofa...",
+    "price": 320000,
+    "originalPrice": 350000,
+    "discount": 8.57,
+    "category": "Sofas",
+    "tags": ["Leather", "Modern", "Luxury", "Home"],
+    "images": {
+      "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
+      "sideAngleImages": [
+        { "key": "side1", "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg" },
+        { "key": "side2", "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg" },
+        { "key": "side3", "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg" },
+        { "key": "side4", "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg" }
+      ]
+    },
+    "color": ["Black", "Brown"],
+    "sizes": ["L", "XL"],
+    "stock": 8,
+    "dimensions": {
+      "width": "280 cm",
+      "height": "80 cm",
+      "depth": "170 cm",
+      "weight": "50 kg",
+      "seatHeight": "42 cm",
+      "legHeight": "6 cm"
+    },
+    "material": "Genuine Leather",
+    "secondaryMaterial": "Stainless Steel",
+    "configuration": "Straight",
+    "upholsteryMaterial": "Genuine Leather",
+    "upholsteryColor": "Black",
+    "fillingMaterial": "High-Density Foam",
+    "finishType": "Glossy",
+    "originOfManufacture": "Italy",
+    "warranty": {
+      "summary": "2 Years Warranty",
+      "serviceType": "Email at support@luxurysofas.com for claims",
+      "covered": "Manufacturing defects",
+      "notCovered": "Damage due to misuse",
+      "domesticWarranty": "2 Years"
+    },
+    "rating": {
+      "average": 4.6,
+      "breakdown": {
+        "fiveStars": 180,
+        "fourStars": 120,
+        "threeStars": 30,
+        "twoStars": 5,
+        "oneStar": 2
+      }
+    },
+    "salesPackage": "1 Leather Sofa, 2 Cushions",
+    "modelNumber": "LSBLK001",
+    "sku": "SS002",
+    "features": [
+      "Adjustable Headrest: No",
+      "Maximum Load Capacity: 300 KG",
+      "Handmade: Yes"
+    ]
+  }
+]`,
+  },
+  {
+    title: "Get Single Product",
+    method: "GET",
+    path: "/api/products/[id]",
+    description: "Retrieve details of a specific product by its ID.",
+    responseFields: [
+      { name: "id", description: "Unique product identifier" },
+      { name: "name", description: "Product name" },
+      { name: "description", description: "Detailed product description" },
+      { name: "price", description: "Current price (in paise/cents)" },
+      { name: "originalPrice", description: "Original price before discount" },
+      { name: "discount", description: "Discount percentage" },
+      { name: "category", description: "Product category" },
+      { name: "tags", description: "Array of product tags" },
+      { name: "images", description: "Object containing image URLs" },
+      { name: "color", description: "Available colors" },
+      { name: "sizes", description: "Available sizes" },
+      { name: "stock", description: "Current stock count" },
+      { name: "dimensions", description: "Product dimensions" },
+      { name: "material", description: "Primary material used" },
+      { name: "secondaryMaterial", description: "Secondary material used" },
+      { name: "configuration", description: "Product configuration" },
+      { name: "upholsteryMaterial", description: "Upholstery material" },
+      { name: "upholsteryColor", description: "Upholstery color" },
+      { name: "fillingMaterial", description: "Filling material" },
+      { name: "finishType", description: "Finish type" },
+      { name: "originOfManufacture", description: "Origin of manufacture" },
+      { name: "warranty", description: "Warranty details" },
+      { name: "rating", description: "Product rating details" },
+      { name: "salesPackage", description: "Items included in sales package" },
+      { name: "modelNumber", description: "Product model number" },
+      { name: "sku", description: "Stock Keeping Unit" },
+      { name: "features", description: "Array of product features" },
+    ],
+    exampleResponse: `{
+  "id": "SS002",
+  "name": "Modern Leather Sofa",
+  "description": "A sleek and luxurious leather sofa...",
+  "price": 320000,
+  "originalPrice": 350000,
+  "discount": 8.57,
+  "category": "Sofas",
+  "tags": ["Leather", "Modern", "Luxury", "Home"],
+  "images": {
+    "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
+    "sideAngleImages": [
+      { "key": "side1", "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg" },
+      { "key": "side2", "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg" },
+      { "key": "side3", "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg" },
+      { "key": "side4", "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg" }
+    ]
+  },
+  "color": ["Black", "Brown"],
+  "sizes": ["L", "XL"],
+  "stock": 8,
+  "dimensions": {
+    "width": "280 cm",
+    "height": "80 cm",
+    "depth": "170 cm",
+    "weight": "50 kg",
+    "seatHeight": "42 cm",
+    "legHeight": "6 cm"
+  },
+  "material": "Genuine Leather",
+  "secondaryMaterial": "Stainless Steel",
+  "configuration": "Straight",
+  "upholsteryMaterial": "Genuine Leather",
+  "upholsteryColor": "Black",
+  "fillingMaterial": "High-Density Foam",
+  "finishType": "Glossy",
+  "originOfManufacture": "Italy",
+  "warranty": {
+    "summary": "2 Years Warranty",
+    "serviceType": "Email at support@luxurysofas.com for claims",
+    "covered": "Manufacturing defects",
+    "notCovered": "Damage due to misuse",
+    "domesticWarranty": "2 Years"
+  },
+  "rating": {
+    "average": 4.6,
+    "breakdown": {
+      "fiveStars": 180,
+      "fourStars": 120,
+      "threeStars": 30,
+      "twoStars": 5,
+      "oneStar": 2
+    }
+  },
+  "salesPackage": "1 Leather Sofa, 2 Cushions",
+  "modelNumber": "LSBLK001",
+  "sku": "SS002",
+  "features": [
+    "Adjustable Headrest: No",
+    "Maximum Load Capacity: 300 KG",
+    "Handmade: Yes"
+  ]
+}`,
+  },
+  {
+    title: "Get All Images",
+    method: "GET",
+    path: "/api/images",
+    description: "Retrieve a list of all available images.",
+    responseFields: [
+      { name: "images", description: "Array of image objects" },
+      { name: "name", description: "Image filename" },
+      { name: "url", description: "Full URL to image including base URL" },
+    ],
+    exampleResponse: `{
+  "images": [
+    {
+      "name": "bed-main.jpeg",
+      "url": "https://template-6-api.vercel.app/images/bed-main.jpeg"
+    },
+    {
+      "name": "bed%20(5).jpeg",
+      "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg"
+    }
+  ]
+}`,
+  },
+  {
+    title: "Access Individual Images",
+    method: "GET",
+    path: "/images/[filename]",
+    description: "Retrieve a specific image by its filename.",
+    responseFields: [
+      { name: "name", description: "Image filename" },
+      { name: "url", description: "Relative path to image" },
+    ],
+    exampleResponse: `{
+  "name": "bed-main.jpeg",
+  "url": "/images/bed-main.jpeg"
+}`,
+  },
+];
+
+interface EndpointProps {
+  endpoint: {
+    title: string;
+    method: string;
+    path: string;
+    description: string;
+    responseFields: { name: string; description: string }[];
+    exampleResponse: string;
+  };
+  index: number;
+  isOpen: boolean;
+  toggleEndpoint: (index: number) => void;
+}
+
+const Endpoint: React.FC<EndpointProps> = ({
+  endpoint,
+  index,
+  isOpen,
+  toggleEndpoint,
+}) => {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-indigo-50 to-purple-50 py-4 px-4 sm:py-6 sm:px-6 lg:py-8 lg:px-8">
-      <motion.div 
-        className="max-w-4xl mx-auto"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5 }}
+    <div className="mb-6">
+      <button
+        onClick={() => toggleEndpoint(index)}
+        className="flex items-center justify-between w-full text-left text-xl font-semibold bg-indigo-300 p-4 rounded-lg hover:bg-indigo-200 transition-colors duration-200"
       >
-        <div className={`text-center mt-36 mb-12 ${marcellus.className}`}>
-          <h1 className={`text-4xl sm:text-5xl font-bold text-indigo-900 mb-4`}>Furniture API Documentation</h1>
-          <p className="text-xl text-indigo-600">Complete guide to using the Furniture Catalog API</p>
-        </div>
-
-        <Section title="Overview">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <p className="text-gray-600 mb-4">
-              This API provides comprehensive access to a furniture catalog database, featuring detailed product information,
-              high-quality images, and complete specifications for various furniture items.
-            </p>
-            <div className="bg-indigo-50 border-l-4 border-indigo-500 p-4">
-              <p className="text-indigo-700">Base URL: <code className="bg-indigo-100 px-2 py-1 rounded">https://template-6-api.vercel.app</code></p>
-            </div>
-          </div>
-        </Section>
-
-        <Section title="Authentication">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <p className="text-gray-600 mb-4">
-              No authentication is required. All endpoints are publicly accessible.
-            </p>
-          </div>
-        </Section>
-
-        <Section title="Endpoints">
-          <div className="space-y-8">
-            <Endpoint
-              title="1. Get All Products"
-              method="GET"
-              path="/api/products"
-              responseFields={[
-                { name: 'id', description: 'Unique product identifier' },
-                { name: 'name', description: 'Product name' },
-                { name: 'description', description: 'Detailed product description' },
-                { name: 'price', description: 'Current price (in paise/cents)' },
-                { name: 'originalPrice', description: 'Original price before discount' },
-                { name: 'discount', description: 'Discount percentage' },
-                { name: 'category', description: 'Product category' },
-                { name: 'images', description: 'Object containing image URLs' },
-                { name: 'dimensions', description: 'Product dimensions' },
-                { name: 'reviews', description: 'Array of customer reviews' },
-              ]}
-              exampleResponse={`{
-  "id": "SS001",
-  "name": "Modern Leather Sofa",
-  "description": "A sleek and luxurious leather sofa...",
-  "price": 320000,
-  "originalPrice": 350000,
-  "discount": 8.57,
-  "category": "Sofas",
-  "images": {
-    "mainImage": "/images/sofa-main.jpeg",
-    "sideAngleImages": [
-      "/images/sofa-angle1.jpeg",
-      "/images/sofa-angle2.jpeg"
-    ]
-  },
-  "dimensions": {
-    "width": "280 cm",
-    "height": "80 cm",
-    "depth": "170 cm"
-  },
-  "reviews": [
-    {
-      "rating": 4.8,
-      "comment": "Excellent quality!",
-      "user": "John Doe"
-    }
-  ]
-}`}
-            />
-
-            <Endpoint
-              title="2. Get Single Product"
-              method="GET"
-              path="/api/products/[id]"
-              responseFields={[
-                { name: 'id', description: 'Product identifier' },
-                { name: 'name', description: 'Product name' },
-                { name: 'description', description: 'Detailed product description' },
-                { name: 'price', description: 'Current price (in paise/cents)' },
-                { name: 'originalPrice', description: 'Original price before discount' },
-                { name: 'discount', description: 'Discount percentage' },
-                { name: 'category', description: 'Product category' },
-                { name: 'images', description: 'Object containing image URLs' },
-                { name: 'dimensions', description: 'Product dimensions' },
-                { name: 'reviews', description: 'Array of customer reviews' },
-              ]}
-              exampleResponse={`{
-  "id": "SS001",
-  "name": "Modern Leather Sofa",
-  "description": "A sleek and luxurious leather sofa...",
-  "price": 320000,
-  "originalPrice": 350000,
-  "discount": 8.57,
-  "category": "Sofas",
-  "images": {
-    "mainImage": "/images/sofa-main.jpeg",
-    "sideAngleImages": [
-      "/images/sofa-angle1.jpeg",
-      "/images/sofa-angle2.jpeg"
-    ]
-  },
-  "dimensions": {
-    "width": "280 cm",
-    "height": "80 cm",
-    "depth": "170 cm"
-  },
-  "reviews": [
-    {
-      "rating": 4.8,
-      "comment": "Excellent quality!",
-      "user": "John Doe"
-    }
-  ]
-}`}
-            />
-
-            <Endpoint
-              title="3. Get All Images"
-              method="GET"
-              path="/api/images"
-              responseFields={[
-                { name: 'name', description: 'Image filename' },
-                { name: 'url', description: 'Relative path to image' },
-              ]}
-              exampleResponse={`[
-  {
-    "name": "sofa-main.jpeg",
-    "url": "/images/sofa-main.jpeg"
-  },
-  {
-    "name": "sofa-angle1.jpeg",
-    "url": "/images/sofa-angle1.jpeg"
-  }
-]`}
-            />
-
-            <Endpoint
-              title="4. Access Individual Images"
-              method="GET"
-              path="/images/[filename]"
-              responseFields={[
-                { name: 'name', description: 'Image filename' },
-                { name: 'url', description: 'Relative path to image' },
-              ]}
-              exampleResponse={`[
-  {
-    "name": "sofa-main.jpeg",
-    "url": "/images/sofa-main.jpeg"
-  },
-  {
-    "name": "sofa-angle1.jpeg",
-    "url": "/images/sofa-angle1.jpeg"
-  }
-]`}
-            />
-          </div>
-        </Section>
-
-        <Section title="Usage Examples">
-          <div className="bg-white rounded-lg shadow-md p-6 space-y-6">
-            <CodeExample
-              title="JavaScript/Fetch"
-              code={`
-// Get all products
-fetch('https://template-6-api.vercel.app/api/products')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
-
-// Get all images
-fetch('https://template-6-api.vercel.app/api/images')
-  .then(response => response.json())
-  .then(data => console.log(data))
-  .catch(error => console.error('Error:', error));
-      `.trim()}
-            />
-
-            <CodeExample
-              title="Axios"
-              code={`
-import axios from 'axios';
-
-// Get all products
-const getProducts = async () => {
-  try {
-    const response = await axios.get('https://template-6-api.vercel.app/api/products');
-    console.log(response.data);
-  } catch (error) {
-    console.error('Error:', error);
-  }
-};
-      `.trim()}
-            />
-          </div>
-        </Section>
-
-        <Section title="Error Handling">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <div className="space-y-4">
-              <ErrorCode code="404" description="Resource not found" />
-              <ErrorCode code="500" description="Internal server error" />
-            </div>
-          </div>
-        </Section>
-
-        <Section title="Important Notes">
-          <div className="bg-white rounded-lg shadow-md p-6">
-            <ul className="list-disc list-inside text-gray-600 space-y-3">
-              <li>All prices are in paise/cents (divide by 100 for actual price in rupees/dollars)</li>
-              <li>Images can be accessed by appending the image URL to the base URL</li>
-              <li>The API implements CORS and allows requests from any origin</li>
-              <li>All responses are in JSON format</li>
-              <li>Rate limiting may be implemented in the future</li>
-            </ul>
-          </div>
-        </Section>
-
-        <div className="mt-12 text-center">
-          <Link href="/" className="text-indigo-500 hover:text-indigo-600 underline text-sm sm:text-base transition-colors duration-200">
-            Return to Home
-          </Link>
-        </div>
-      </motion.div>
+        <span>{`${endpoint.method} ${endpoint.path} - ${endpoint.title}`}</span>
+        {isOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+      </button>
+      {isOpen && (
+        <motion.div
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.3 }}
+          className="mt-4 pl-4 border-l-2 border-indigo-200"
+        >
+          <p className="mb-2 text-gray-700">{endpoint.description}</p>
+          <h4 className="font-semibold text-indigo-700 mb-2">Response Fields:</h4>
+          <ul className="list-disc list-inside text-gray-700 mb-4">
+            {endpoint.responseFields.map((field, i) => (
+              <li key={i}>
+                <code className="bg-indigo-100 px-1 rounded">{field.name}</code> -{" "}
+                {field.description}
+              </li>
+            ))}
+          </ul>
+          <h4 className="font-semibold text-indigo-700 mb-2">Example Response:</h4>
+          <SyntaxHighlighter language="json" style={atomDark} className="rounded-md">
+            {endpoint.exampleResponse}
+          </SyntaxHighlighter>
+        </motion.div>
+      )}
     </div>
   );
 };
 
-const Section: React.FC<SectionProps> = ({ title, children }) => (
-  <motion.section 
-    className="mb-8 sm:mb-12 lg:mb-16"
-    initial={{ opacity: 0, y: 20 }}
-    animate={{ opacity: 1, y: 0 }}
-    transition={{ duration: 0.5 }}
-  >
-    <h2 className="text-2xl sm:text-3xl font-semibold text-indigo-800 mb-4 sm:mb-6">{title}</h2>
-    {children}
-  </motion.section>
-);
+const DocsPage = () => {
+  const [openEndpoints, setOpenEndpoints] = useState<boolean[]>(
+    new Array(endpoints.length).fill(false)
+  );
 
-const Endpoint: React.FC<EndpointProps> = ({ title, method, path, responseFields, exampleResponse }) => (
-  <div className="bg-white rounded-lg shadow-md p-4 sm:p-6">
-    <h3 className="text-xl sm:text-2xl font-medium text-indigo-800 mb-3 sm:mb-4">{title}</h3>
-    <div className="bg-indigo-50 p-2 sm:p-3 rounded mb-3 sm:mb-4 flex flex-col sm:flex-row justify-between items-start sm:items-center">
-      <code className="text-indigo-700 text-sm sm:text-base mb-2 sm:mb-0">{method} {path}</code>
-      <span className="text-green-600 text-xs sm:text-sm font-semibold">200 OK</span>
-    </div>
-    
-    <h4 className="font-semibold text-indigo-700 mb-2">Response Fields:</h4>
-    <div className="mb-4">
-      <ul className="list-disc list-inside text-gray-600 space-y-1 sm:space-y-2">
-        {responseFields.map((field, index) => (
-          <li key={index} className="text-sm sm:text-base"><code className="text-xs sm:text-sm bg-indigo-100 px-1">{field.name}</code> - {field.description}</li>
-        ))}
-      </ul>
-    </div>
+  const toggleEndpoint = (index: number) => {
+    setOpenEndpoints((prev) =>
+      prev.map((isOpen, i) => (i === index ? !isOpen : isOpen))
+    );
+  };
 
-    <h4 className="font-semibold text-indigo-700 mb-2">Example Response:</h4>
-    <div className="bg-gray-100 p-3 sm:p-4 rounded-lg overflow-x-auto">
-      <pre className="text-xs sm:text-sm text-gray-800 whitespace-pre-wrap break-words">
-        {exampleResponse}
-      </pre>
+  return (
+    <div className="min-h-screen bg-gradient-to-br pt-40 from-indigo-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-8">
+      <div className="max-w-3xl mx-auto">
+        <motion.h1
+          className="text-4xl font-bold text-center text-indigo-900 mb-20"
+          initial={{ opacity: 0, y: -20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5 }}
+        >
+          <h1 className={`${marcellus.className}`}>Furniture API Documentation</h1>
+        </motion.h1>
+        <motion.div
+          className="bg-white rounded-xl text-indigo-900 shadow-lg p-6 mb-8"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+        >
+          {endpoints.map((endpoint, index) => (
+            <Endpoint
+              key={index}
+              endpoint={endpoint}
+              index={index}
+              isOpen={openEndpoints[index]}
+              toggleEndpoint={toggleEndpoint}
+            />
+          ))}
+        </motion.div>
+        <div className="mt-8 text-center">
+          <a
+            href="https://template-6-api.vercel.app"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
+          >
+            Visit API Base URL
+            <ExternalLink size={20} className="ml-2" />
+          </a>
+        </div>
+      </div>
     </div>
-  </div>
-);
-
-const CodeExample: React.FC<CodeExampleProps> = ({ title, code }) => (
-  <div>
-    <h3 className="text-lg sm:text-xl font-medium text-indigo-800 mb-2 sm:mb-3">{title}</h3>
-    <div className="bg-gray-100 p-3 sm:p-4 rounded-lg overflow-x-auto">
-      <pre className="text-xs sm:text-sm text-gray-800">
-        <code className="break-words whitespace-pre-wrap">{code}</code>
-      </pre>
-    </div>
-  </div>
-);
-
-const ErrorCode: React.FC<ErrorCodeProps> = ({ code, description }) => (
-  <div className="flex items-start space-x-3 sm:space-x-4">
-    <span className="bg-red-100 text-red-800 px-2 sm:px-3 py-1 rounded text-sm sm:text-base">{code}</span>
-    <p className="text-gray-600 text-sm sm:text-base">{description}</p>
-  </div>
-);
+  );
+};
 
 export default DocsPage;
-

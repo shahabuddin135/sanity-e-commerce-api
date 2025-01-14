@@ -106,61 +106,60 @@ NEXT_PUBLIC_SANITY_TOKEN=your_sanity_token`
         "2. Inside the scripts folder, create a file named importSanityData.mjs.",
         "3. Paste the following code into importSanityData.mjs:"
       ],
-      code: `import { createClient } from '@sanity/client'
-import axios from 'axios'
-import dotenv from 'dotenv'
-import { fileURLToPath } from 'url'
-import path from 'path'
+      code: `import { createClient } from '@sanity/client';
+import axios from 'axios';
+import dotenv from 'dotenv';
 
-// Load environment variables from .env.local
-const __filename = fileURLToPath(import.meta.url)
-const __dirname = path.dirname(__filename)
-dotenv.config({ path: path.resolve(__dirname, '../.env.local') })
+dotenv.config();
 
-// Create Sanity client
 const client = createClient({
   projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID,
   dataset: process.env.NEXT_PUBLIC_SANITY_DATASET,
   useCdn: false,
   token: process.env.NEXT_PUBLIC_SANITY_TOKEN,
-  apiVersion: '2021-08-31'
-})
+  apiVersion: '2021-08-31',
+});
 
-async function uploadImageToSanity(imageUrl) {
+// Function to upload images
+async function uploadImageToSanity(url) {
   try {
-    console.log(\`Uploading image: \${imageUrl}\`)
-    const response = await axios.get(imageUrl, { responseType: 'arraybuffer' })
-    const buffer = Buffer.from(response.data)
+    const response = await axios.get(url, { responseType: 'arraybuffer' });
+    const buffer = Buffer.from(response.data);
     const asset = await client.assets.upload('image', buffer, {
-      filename: imageUrl.split('/').pop()
-    })
-    console.log(\`Image uploaded successfully: \${asset._id}\`)
-    return asset._id
+      filename: url.split('/').pop(),
+    });
+    return { _type: 'image', asset: { _ref: asset._id } };
   } catch (error) {
-    console.error('Failed to upload image:', imageUrl, error)
-    return null
+    console.error(\`Failed to upload image: \${url}\`, error.message);
+    return null;
   }
 }
 
-async function importData() {
+// Upload product data
+async function importProducts() {
   try {
-    console.log('Fetching products from API...')
-
-    // Replace this URL with your API endpoint
-    const response = await axios.get('https://template-6-api.vercel.app/api/products')
-
-    const products = response.data
-
-    console.log(\`Fetched \${products.length} products\`)
+    const response = await axios.get('https://template-6-api.vercel.app/api/products');
+    const products = response.data;
 
     for (const product of products) {
-      console.log(\`Processing product: \${product.name}\`)
+      const mainImage = await uploadImageToSanity(product.images.mainImage);
 
-      let imageRef = null
+      const sideAngleImages = await Promise.all(
+        product.images.sideAngleImages.map(async (imageObj) => {
+          const { key, url } = imageObj;
+          const uploadedImage = await uploadImageToSanity(url);
+          return uploadedImage
+            ? {
+                _key: key,
+                _type: 'object',
+                key: key,
+                image: uploadedImage,
+              }
+            : null;
+        })
+      );
 
-      if (product.image) {
-        imageRef = await uploadImageToSanity(product.image)
-      }
+      const validSideImages = sideAngleImages.filter(Boolean);
 
       const sanityProduct = {
         _type: 'product',
@@ -173,37 +172,40 @@ async function importData() {
         category: product.category,
         tags: product.tags,
         images: {
-          mainImage: product.images.mainImage,
-          sideAngleImages: product.images.sideAngleImages,
+          _type: 'images',
+          mainImage,
+          sideAngleImages: validSideImages,
         },
         color: product.color,
         sizes: product.sizes,
         stock: product.stock,
         dimensions: product.dimensions,
         material: product.material,
+        secondaryMaterial: product.secondaryMaterial,
         configuration: product.configuration,
+        upholsteryMaterial: product.upholsteryMaterial,
+        upholsteryColor: product.upholsteryColor,
+        fillingMaterial: product.fillingMaterial,
+        finishType: product.finishType,
+        originOfManufacture: product.originOfManufacture,
         warranty: product.warranty,
-        reviews: product.reviews,
         rating: product.rating,
         salesPackage: product.salesPackage,
         modelNumber: product.modelNumber,
         sku: product.sku,
         features: product.features,
-        relatedProducts: product.relatedProducts,
-      }
+      };
 
-      console.log('Uploading product to Sanity:', sanityProduct.name)
-      const result = await client.create(sanityProduct)
-      console.log(\`Product uploaded successfully: \${result.id}\`)
+      const result = await client.create(sanityProduct);
+      console.log(\`Uploaded product: \${result._id}\`);
     }
-
-    console.log('Data import completed successfully!')
   } catch (error) {
-    console.error('Error importing data:', error)
+    console.error('Error importing products:', error.message);
   }
 }
 
-importData()`
+importProducts();
+`
     },
     {
       title: "Add Script to package.json",
