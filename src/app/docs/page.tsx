@@ -28,7 +28,8 @@ const endpoints = [
       { name: "discount", description: "Discount percentage" },
       { name: "category", description: "Product category" },
       { name: "tags", description: "Array of product tags" },
-      { name: "images", description: "Object containing image URLs" },
+      { name: "mainImage", description: "Containing the main product image URL" },
+      { name: "sideAngleImages", description: "Array of objects containing different angles image URLs & unique key" },
       { name: "color", description: "Available colors" },
       { name: "sizes", description: "Available sizes" },
       { name: "stock", description: "Current stock count" },
@@ -58,15 +59,16 @@ const endpoints = [
     "discount": 8.57,
     "category": "Sofas",
     "tags": ["Leather", "Modern", "Luxury", "Home"],
-    "images": {
+  
       "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
+
       "sideAngleImages": [
         { "key": "side1", "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg" },
         { "key": "side2", "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg" },
         { "key": "side3", "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg" },
         { "key": "side4", "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg" }
-      ]
-    },
+      ],
+    
     "color": ["Black", "Brown"],
     "sizes": ["L", "XL"],
     "stock": 8,
@@ -128,7 +130,8 @@ const endpoints = [
       { name: "discount", description: "Discount percentage" },
       { name: "category", description: "Product category" },
       { name: "tags", description: "Array of product tags" },
-      { name: "images", description: "Object containing image URLs" },
+      { name: "mainImage", description: "Containing the main product image URL" },
+      { name: "sideAngleImages", description: "Array of objects containing different angles image URLs & unique key" },
       { name: "color", description: "Available colors" },
       { name: "sizes", description: "Available sizes" },
       { name: "stock", description: "Current stock count" },
@@ -157,15 +160,16 @@ const endpoints = [
   "discount": 8.57,
   "category": "Sofas",
   "tags": ["Leather", "Modern", "Luxury", "Home"],
-  "images": {
+  
     "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
+
     "sideAngleImages": [
       { "key": "side1", "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg" },
       { "key": "side2", "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg" },
       { "key": "side3", "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg" },
       { "key": "side4", "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg" }
-    ]
-  },
+    ],
+ 
   "color": ["Black", "Brown"],
   "sizes": ["L", "XL"],
   "stock": 8,

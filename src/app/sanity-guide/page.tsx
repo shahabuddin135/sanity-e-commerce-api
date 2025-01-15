@@ -77,11 +77,6 @@ NEXT_PUBLIC_SANITY_TOKEN=your_sanity_token`
       title: 'Price',
       type: 'number',
     },
-    {
-      name: 'images',
-      title: 'Images',
-      type: 'object',
-      fields: [
         {
           name: 'mainImage',
           title: 'Main Image',
@@ -93,8 +88,8 @@ NEXT_PUBLIC_SANITY_TOKEN=your_sanity_token`
           type: 'array',
           of: [{ type: 'string' }],
         },
-      ],
-    },
+      
+    
     // Add other fields as needed
   ],
 }`
@@ -127,6 +122,7 @@ async function uploadImageToSanity(url) {
     const buffer = Buffer.from(response.data);
     const asset = await client.assets.upload('image', buffer, {
       filename: url.split('/').pop(),
+      published: true, // Ensure the asset is published immediately
     });
     return { _type: 'image', asset: { _ref: asset._id } };
   } catch (error) {
@@ -142,16 +138,15 @@ async function importProducts() {
     const products = response.data;
 
     for (const product of products) {
-      const mainImage = await uploadImageToSanity(product.images.mainImage);
+      const mainImage = await uploadImageToSanity(product.mainImage);
 
       const sideAngleImages = await Promise.all(
-        product.images.sideAngleImages.map(async (imageObj) => {
+        product.sideAngleImages.map(async (imageObj) => {
           const { key, url } = imageObj;
           const uploadedImage = await uploadImageToSanity(url);
           return uploadedImage
             ? {
                 _key: key,
-                _type: 'object',
                 key: key,
                 image: uploadedImage,
               }
@@ -171,11 +166,8 @@ async function importProducts() {
         discount: product.discount,
         category: product.category,
         tags: product.tags,
-        images: {
-          _type: 'images',
-          mainImage,
-          sideAngleImages: validSideImages,
-        },
+        mainImage,
+        sideAngleImages: validSideImages, // Directly assign sideAngleImages
         color: product.color,
         sizes: product.sizes,
         stock: product.stock,
@@ -258,8 +250,8 @@ importProducts();
     {
       title: "Conclusion",
       content: [
-        "By following these steps, you&apos;ve successfully imported your data into Sanity CMS.",
-        "You can now manage and query your content using Sanity&apos;s powerful features.",
+        "By following these steps, you have successfully imported your data into Sanity CMS.",
+        "You can now manage and query your content using Sanity powerful features.",
         "Make sure to follow the best practices for maintaining and updating your data."
       ]
     }
