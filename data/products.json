@@ -7,18 +7,39 @@
     "originalPrice": 350000,
     "discount": 8.57,
     "category": "Sofas",
-    "tags": ["Leather", "Modern", "Luxury", "Home"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg" },
-        { "key": "side3", "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg" },
-        { "key": "side4", "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg" }
-      ]
-    },
-    "color": ["Black", "Brown"],
-    "sizes": ["L", "XL"],
+    "tags": [
+      "Leather",
+      "Modern",
+      "Luxury",
+      "Home"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg"
+      },
+      {
+        "key": "side3",
+        "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg"
+      },
+      {
+        "key": "side4",
+        "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg"
+      }
+    ],
+    "color": [
+      "Black",
+      "Brown"
+    ],
+    "sizes": [
+      "L",
+      "XL"
+    ],
     "stock": 8,
     "dimensions": {
       "width": "280 cm",
@@ -68,20 +89,41 @@
     "description": "A simple yet elegant fabric sofa, perfect for minimalist interiors. The neutral tones and clean design make it versatile for any living space.",
     "price": 180000,
     "originalPrice": 200000,
-    "discount": 10.0,
+    "discount": 10,
     "category": "Sofas",
-    "tags": ["Fabric", "Minimalist", "Comfort", "Home"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/black-chair-main.jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/black-chair%20(4).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/black-chair%20(3).jpeg" },
-        { "key": "side3", "url": "https://template-6-api.vercel.app/images/black-chair%20(2).jpeg" },
-        { "key": "side4", "url": "https://template-6-api.vercel.app/images/black-chair%20(1).jpeg" }
-      ]
-    },
-    "color": ["Beige", "Grey"],
-    "sizes": ["M", "L"],
+    "tags": [
+      "Fabric",
+      "Minimalist",
+      "Comfort",
+      "Home"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/black-chair-main.jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/black-chair%20(4).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/black-chair%20(3).jpeg"
+      },
+      {
+        "key": "side3",
+        "url": "https://template-6-api.vercel.app/images/black-chair%20(2).jpeg"
+      },
+      {
+        "key": "side4",
+        "url": "https://template-6-api.vercel.app/images/black-chair%20(1).jpeg"
+      }
+    ],
+    "color": [
+      "Beige",
+      "Grey"
+    ],
+    "sizes": [
+      "M",
+      "L"
+    ],
     "stock": 12,
     "dimensions": {
       "width": "240 cm",
@@ -133,16 +175,31 @@
     "originalPrice": 250000,
     "discount": 10.4,
     "category": "Outdoor Furniture",
-    "tags": ["Outdoor", "Weatherproof", "Garden", "Patio"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/brown-sofa-main.jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/brown-sofa%20(2).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg" }
-      ]
-    },
-    "color": ["Brown", "Beige"],
-    "sizes": ["L", "XL"],
+    "tags": [
+      "Outdoor",
+      "Weatherproof",
+      "Garden",
+      "Patio"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/brown-sofa-main.jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/brown-sofa%20(2).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/brown-sofa%20(1).jpeg"
+      }
+    ],
+    "color": [
+      "Brown",
+      "Beige"
+    ],
+    "sizes": [
+      "L",
+      "XL"
+    ],
     "stock": 5,
     "dimensions": {
       "width": "300 cm",
@@ -194,16 +251,31 @@
     "originalPrice": 300000,
     "discount": 6.67,
     "category": "Sofas",
-    "tags": ["Velvet", "Luxury", "Comfort", "Home"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/bubble-sofa-main.jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/bubble-sofa%20(2).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/bubble-sofa%20(1).jpeg" }
-      ]
-    },
-    "color": ["Emerald Green", "Royal Blue"],
-    "sizes": ["L", "XL"],
+    "tags": [
+      "Velvet",
+      "Luxury",
+      "Comfort",
+      "Home"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/bubble-sofa-main.jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/bubble-sofa%20(2).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/bubble-sofa%20(1).jpeg"
+      }
+    ],
+    "color": [
+      "Emerald Green",
+      "Royal Blue"
+    ],
+    "sizes": [
+      "L",
+      "XL"
+    ],
     "stock": 7,
     "dimensions": {
       "width": "270 cm",
@@ -255,18 +327,39 @@
     "originalPrice": 210000,
     "discount": 9.52,
     "category": "Sofas",
-    "tags": ["Wooden", "Scandinavian", "Minimalist", "Home"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/flower-lamp-main.jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(4).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(3).jpeg" },
-        { "key": "side3", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(2).jpeg" },
-        { "key": "side4", "url": "https://template-6-api.vercel.app/images/flower-lamp%20(1).jpeg" }
-      ]
-    },
-    "color": ["Natural Wood", "Walnut"],
-    "sizes": ["M", "L"],
+    "tags": [
+      "Wooden",
+      "Scandinavian",
+      "Minimalist",
+      "Home"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/flower-lamp-main.jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/flower-lamp%20(4).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/flower-lamp%20(3).jpeg"
+      },
+      {
+        "key": "side3",
+        "url": "https://template-6-api.vercel.app/images/flower-lamp%20(2).jpeg"
+      },
+      {
+        "key": "side4",
+        "url": "https://template-6-api.vercel.app/images/flower-lamp%20(1).jpeg"
+      }
+    ],
+    "color": [
+      "Natural Wood",
+      "Walnut"
+    ],
+    "sizes": [
+      "M",
+      "L"
+    ],
     "stock": 9,
     "dimensions": {
       "width": "220 cm",
@@ -318,18 +411,39 @@
     "originalPrice": 190000,
     "discount": 10.53,
     "category": "Sofas",
-    "tags": ["Bohemian", "Colorful", "Eclectic", "Home"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/marble-table-main%20(2).jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(1).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(3).jpeg" },
-        { "key": "side3", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(4).jpeg" },
-        { "key": "side4", "url": "https://template-6-api.vercel.app/images/marble-table-main%20(5).jpeg" }
-      ]
-    },
-    "color": ["Multicolor", "Teal"],
-    "sizes": ["M", "L"],
+    "tags": [
+      "Bohemian",
+      "Colorful",
+      "Eclectic",
+      "Home"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/marble-table-main%20(2).jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/marble-table-main%20(1).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/marble-table-main%20(3).jpeg"
+      },
+      {
+        "key": "side3",
+        "url": "https://template-6-api.vercel.app/images/marble-table-main%20(4).jpeg"
+      },
+      {
+        "key": "side4",
+        "url": "https://template-6-api.vercel.app/images/marble-table-main%20(5).jpeg"
+      }
+    ],
+    "color": [
+      "Multicolor",
+      "Teal"
+    ],
+    "sizes": [
+      "M",
+      "L"
+    ],
     "stock": 10,
     "dimensions": {
       "width": "230 cm",
@@ -381,18 +495,39 @@
     "originalPrice": 260000,
     "discount": 7.69,
     "category": "Sofas",
-    "tags": ["Mid-Century", "Modern", "Retro", "Home"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/mirrors-main.jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/mirrors%20(4).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/mirrors%20(3).jpeg" },
-        { "key": "side3", "url": "https://template-6-api.vercel.app/images/mirrors%20(2).jpeg" },
-        { "key": "side4", "url": "https://template-6-api.vercel.app/images/mirrors%20(1).jpeg" }
-      ]
-    },
-    "color": ["Mustard Yellow", "Dark Brown"],
-    "sizes": ["L", "XL"],
+    "tags": [
+      "Mid-Century",
+      "Modern",
+      "Retro",
+      "Home"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/mirrors-main.jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/mirrors%20(4).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/mirrors%20(3).jpeg"
+      },
+      {
+        "key": "side3",
+        "url": "https://template-6-api.vercel.app/images/mirrors%20(2).jpeg"
+      },
+      {
+        "key": "side4",
+        "url": "https://template-6-api.vercel.app/images/mirrors%20(1).jpeg"
+      }
+    ],
+    "color": [
+      "Mustard Yellow",
+      "Dark Brown"
+    ],
+    "sizes": [
+      "L",
+      "XL"
+    ],
     "stock": 7,
     "dimensions": {
       "width": "260 cm",
@@ -442,20 +577,41 @@
     "description": "A versatile sofa that converts into a comfortable bed. The charcoal grey fabric and sturdy frame make it perfect for small spaces and guest rooms.",
     "price": 270000,
     "originalPrice": 300000,
-    "discount": 10.0,
+    "discount": 10,
     "category": "Sofas",
-    "tags": ["Convertible", "Sleeper", "Multi-functional", "Home"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/old-lamp-main.jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/old-lamp%20(5).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/old-lamp%20(3).jpeg" },
-        { "key": "side3", "url": "https://template-6-api.vercel.app/images/old-lamp%20(2).jpeg" },
-        { "key": "side4", "url": "https://template-6-api.vercel.app/images/old-lamp%20(1).jpeg" }
-      ]
-    },
-    "color": ["Charcoal Grey", "Navy Blue"],
-    "sizes": ["L", "XL"],
+    "tags": [
+      "Convertible",
+      "Sleeper",
+      "Multi-functional",
+      "Home"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/old-lamp-main.jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/old-lamp%20(5).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/old-lamp%20(3).jpeg"
+      },
+      {
+        "key": "side3",
+        "url": "https://template-6-api.vercel.app/images/old-lamp%20(2).jpeg"
+      },
+      {
+        "key": "side4",
+        "url": "https://template-6-api.vercel.app/images/old-lamp%20(1).jpeg"
+      }
+    ],
+    "color": [
+      "Charcoal Grey",
+      "Navy Blue"
+    ],
+    "sizes": [
+      "L",
+      "XL"
+    ],
     "stock": 8,
     "dimensions": {
       "width": "280 cm",
@@ -507,17 +663,35 @@
     "originalPrice": 380000,
     "discount": 7.89,
     "category": "Sofas",
-    "tags": ["Recliner", "Luxury", "Massage", "Home"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/round-table-main.jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/round-table%20(3).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/round-table%20(2).jpeg" },
-        { "key": "side3", "url": "https://template-6-api.vercel.app/images/round-table%20(1).jpg" }
-      ]
-    },
-    "color": ["Black", "Brown"],
-    "sizes": ["L", "XL"],
+    "tags": [
+      "Recliner",
+      "Luxury",
+      "Massage",
+      "Home"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/round-table-main.jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/round-table%20(3).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/round-table%20(2).jpeg"
+      },
+      {
+        "key": "side3",
+        "url": "https://template-6-api.vercel.app/images/round-table%20(1).jpg"
+      }
+    ],
+    "color": [
+      "Black",
+      "Brown"
+    ],
+    "sizes": [
+      "L",
+      "XL"
+    ],
     "stock": 5,
     "dimensions": {
       "width": "290 cm",
@@ -571,18 +745,39 @@
     "originalPrice": 140000,
     "discount": 14.29,
     "category": "Kids' Furniture",
-    "tags": ["Kids", "Play", "Colorful", "Home"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/white-sofa-main.jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/white-sofa%20(2).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/white-sofa%20(3).jpeg" },
-        { "key": "side3", "url": "https://template-6-api.vercel.app/images/white-sofa%20(4).jpeg" },
-        { "key": "side4", "url": "https://template-6-api.vercel.app/images/white-sofa%20(5).jpeg" }
-      ]
-    },
-    "color": ["Blue", "Pink"],
-    "sizes": ["S", "M"],
+    "tags": [
+      "Kids",
+      "Play",
+      "Colorful",
+      "Home"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/white-sofa-main.jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/white-sofa%20(2).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/white-sofa%20(3).jpeg"
+      },
+      {
+        "key": "side3",
+        "url": "https://template-6-api.vercel.app/images/white-sofa%20(4).jpeg"
+      },
+      {
+        "key": "side4",
+        "url": "https://template-6-api.vercel.app/images/white-sofa%20(5).jpeg"
+      }
+    ],
+    "color": [
+      "Blue",
+      "Pink"
+    ],
+    "sizes": [
+      "S",
+      "M"
+    ],
     "stock": 12,
     "dimensions": {
       "width": "150 cm",
@@ -634,18 +829,39 @@
     "originalPrice": 450000,
     "discount": 11.11,
     "category": "Sofas",
-    "tags": ["Vintage", "Chesterfield", "Leather", "Home"],
-    "images": {
-      "mainImage": "https://template-6-api.vercel.app/images/white-chair-main.jpeg",
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/white-chair%20(1).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/white-chair%20(3).jpeg" },
-        { "key": "side3", "url": "https://template-6-api.vercel.app/images/white-chair%20(4).jpeg" },
-        { "key": "side4", "url": "https://template-6-api.vercel.app/images/white-chair%20(5).jpeg" }
-      ]
-    },
-    "color": ["Brown", "Burgundy"],
-    "sizes": ["L", "XL"],
+    "tags": [
+      "Vintage",
+      "Chesterfield",
+      "Leather",
+      "Home"
+    ],
+    "mainImage": "https://template-6-api.vercel.app/images/white-chair-main.jpeg",
+    "sideAngleImages": [
+      {
+        "key": "side1",
+        "url": "https://template-6-api.vercel.app/images/white-chair%20(1).jpeg"
+      },
+      {
+        "key": "side2",
+        "url": "https://template-6-api.vercel.app/images/white-chair%20(3).jpeg"
+      },
+      {
+        "key": "side3",
+        "url": "https://template-6-api.vercel.app/images/white-chair%20(4).jpeg"
+      },
+      {
+        "key": "side4",
+        "url": "https://template-6-api.vercel.app/images/white-chair%20(5).jpeg"
+      }
+    ],
+    "color": [
+      "Brown",
+      "Burgundy"
+    ],
+    "sizes": [
+      "L",
+      "XL"
+    ],
     "stock": 4,
     "dimensions": {
       "width": "300 cm",
