@@ -79,7 +79,7 @@ export default function Home() {
             { href: '/docs', text: 'Read API Docs', icon: <Book />, bgColor: 'bg-purple-600', hoverColor: 'hover:bg-purple-700' },
             { href: '/sanity-guide', text: 'Upload To Sanity', icon: <Upload />, bgColor: 'bg-pink-600', hoverColor: 'hover:bg-pink-700' },
             { href: '/about', text: 'Meet The Developer', icon: <User />, bgColor: 'bg-blue-600', hoverColor: 'hover:bg-blue-700' }
-          ].map((item, index) => (
+          ].map((item) => (
             <Link key={item.href} href={item.href} className="w-full">
               <motion.button 
                 className={`w-full ${item.bgColor} text-white px-4 py-3 rounded-lg ${item.hoverColor} transition-all duration-300 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-opacity-50 shadow-md flex items-center justify-center gap-2 group`}
