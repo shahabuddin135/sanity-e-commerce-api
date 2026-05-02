@@ -2,8 +2,7 @@
 
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-// @ts-expect-error - hljs styles lack type declarations
+import SyntaxHighlighter from 'react-syntax-highlighter';
 import { atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 import Image from 'next/image';
 import CopyButton from '@/components/CopyButton';

@@ -1,5 +1,7 @@
 ﻿'use client';
 
+export const dynamic = 'force-dynamic';
+
 import 'jsoncrack-react/style.css';
 
 import React, { useState, useEffect, useRef } from 'react';
@@ -19,10 +21,9 @@ export default function VisualizePage() {
   const crackerRef = useRef<JSONCrackRef>(null);
 
   const [activeTab,  setActiveTab]  = useState<Tab>('products');
-  const [data,       setData]       = useState<unknown>(null);
+  const [data,       setData]       = useState<object | null>(null);
   const [loading,    setLoading]    = useState(false);
   const [error,      setError]      = useState<string | null>(null);
-  const [direction,  setDirection]  = useState<'RIGHT' | 'DOWN'>('RIGHT');
 
   useEffect(() => {
     if (!baseUrl) return;
@@ -95,22 +96,6 @@ export default function VisualizePage() {
           ))}
         </div>
 
-        {/* Direction toggle */}
-        <div className="flex items-center gap-0 border border-stone-200 overflow-hidden">
-          {(['RIGHT', 'DOWN'] as const).map((d) => (
-            <button
-              key={d}
-              onClick={() => setDirection(d)}
-              className={`px-4 py-2 text-[0.6rem] uppercase tracking-[0.22em] transition-colors ${
-                direction === d
-                  ? 'bg-stone-900 text-stone-100'
-                  : 'bg-transparent text-stone-500 hover:text-stone-800'
-              }`}
-            >
-              {d === 'RIGHT' ? '→ Horizontal' : '↓ Vertical'}
-            </button>
-          ))}
-        </div>
 
         {/* Zoom controls */}
         <div className="flex items-center gap-0 border border-stone-200 overflow-hidden ml-auto">
@@ -162,7 +147,6 @@ export default function VisualizePage() {
               ref={crackerRef}
               json={JSON.stringify(data)}
               theme="light"
-              direction={direction}
               style={{ width: '100%', height: '100%' }}
             />
           )}

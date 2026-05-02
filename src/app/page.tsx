@@ -168,7 +168,7 @@ export default function Home() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 border-l border-stone-200">
           {LINKS.map((link, i) => (
             <Link
-              key={link.href}
+              key={i}
               href={link.href}
               className="group border-r border-b border-stone-200 px-8 py-10 hover:bg-stone-100/60 transition-colors"
             >
