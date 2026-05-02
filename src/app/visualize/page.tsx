@@ -2,12 +2,12 @@
 
 export const dynamic = 'force-dynamic';
 
-import 'jsoncrack-react/style.css';
-
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
+import nextDynamic from 'next/dynamic';
 import { motion } from 'framer-motion';
-import { JSONCrack, type JSONCrackRef } from 'jsoncrack-react';
 import { useBaseUrl } from '@/lib/useBaseUrl';
+
+const JsonCrackCanvas = nextDynamic(() => import('./JsonCrackCanvas'), { ssr: false });
 
 type Tab = 'products' | 'images';
 
@@ -18,7 +18,6 @@ const tabs: { id: Tab; label: string; path: string }[] = [
 
 export default function VisualizePage() {
   const baseUrl    = useBaseUrl();
-  const crackerRef = useRef<JSONCrackRef>(null);
 
   const [activeTab,  setActiveTab]  = useState<Tab>('products');
   const [data,       setData]       = useState<object | null>(null);
@@ -97,33 +96,13 @@ export default function VisualizePage() {
         </div>
 
 
-        {/* Zoom controls */}
-        <div className="flex items-center gap-0 border border-stone-200 overflow-hidden ml-auto">
-          <button
-            onClick={() => crackerRef.current?.zoomIn()}
-            className="px-4 py-2 text-[0.6rem] uppercase tracking-[0.22em] text-stone-500 hover:text-stone-900 hover:bg-stone-100 transition-colors border-r border-stone-200"
-          >
-            + Zoom In
-          </button>
-          <button
-            onClick={() => crackerRef.current?.zoomOut()}
-            className="px-4 py-2 text-[0.6rem] uppercase tracking-[0.22em] text-stone-500 hover:text-stone-900 hover:bg-stone-100 transition-colors border-r border-stone-200"
-          >
-            − Zoom Out
-          </button>
-          <button
-            onClick={() => crackerRef.current?.centerView()}
-            className="px-4 py-2 text-[0.6rem] uppercase tracking-[0.22em] text-stone-500 hover:text-stone-900 hover:bg-stone-100 transition-colors"
-          >
-            ⊙ Center
-          </button>
-        </div>
+
       </section>
 
       {/* ── CANVAS ──────────────────────────────────────── */}
-      <section className="flex-1 relative">
+      <section className="flex-1 relative flex flex-col">
         {/* Status overlay */}
-        {(loading || error || !baseUrl) && (
+        {(loading || error || !baseUrl || !data) && (
           <div className="absolute inset-0 flex items-center justify-center z-10 bg-[#F4F0E6]/80">
             {!baseUrl && (
               <p className="text-[0.6rem] uppercase tracking-[0.22em] text-stone-400">Initialising…</p>
@@ -141,16 +120,7 @@ export default function VisualizePage() {
           </div>
         )}
 
-        <div className="w-full h-[calc(100vh-20rem)]" style={{ minHeight: '500px' }}>
-          {data && (
-            <JSONCrack
-              ref={crackerRef}
-              json={JSON.stringify(data)}
-              theme="light"
-              style={{ width: '100%', height: '100%' }}
-            />
-          )}
-        </div>
+        {data && <JsonCrackCanvas json={JSON.stringify(data)} />}
       </section>
 
     </main>
