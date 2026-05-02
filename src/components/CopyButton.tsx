@@ -4,38 +4,46 @@ import { Copy, Check } from 'lucide-react';
 import { useState } from 'react';
 
 type CopyButtonProps = {
-    textToCopy: string;
+    text?: string;
+    textToCopy?: string;
 };
 
-export default function CopyButton({ textToCopy }: CopyButtonProps) {
+export default function CopyButton({ text, textToCopy }: CopyButtonProps) {
     const [copied, setCopied] = useState(false);
+    const value = text ?? textToCopy ?? '';
 
     const handleCopy = async () => {
+        if (!value) return;
         try {
-            await navigator.clipboard.writeText(textToCopy);
+            await navigator.clipboard.writeText(value);
             setCopied(true);
             setTimeout(() => setCopied(false), 2000);
-        } catch (err) {
-            console.error('Failed to copy text:', err);
+        } catch {
+            // ignore
         }
     };
 
     return (
         <button
             onClick={handleCopy}
-            className="flex items-center gap-2 px-3 py-1 text-sm text-gray-500 transition-colors bg-gray-100 rounded-md hover:bg-gray-200"
+            className={`inline-flex items-center gap-1 text-[0.6rem] uppercase tracking-[0.15em] border px-2 py-1 shrink-0 transition-colors duration-200 ${
+                copied
+                    ? 'border-stone-400 text-stone-700'
+                    : 'border-stone-200 text-stone-400 hover:border-stone-400 hover:text-stone-700'
+            }`}
+            aria-label="Copy to clipboard"
         >
             {copied ? (
                 <>
-                    <Check size={16} />
-                    <span>Copied!</span>
+                    <Check size={9} strokeWidth={2.5} />
+                    <span>Copied</span>
                 </>
             ) : (
                 <>
-                    <Copy size={16} />
-                    <span>Copy API URL</span>
+                    <Copy size={9} strokeWidth={2} />
+                    <span>Copy</span>
                 </>
             )}
         </button>
     );
-} 
+}

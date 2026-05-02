@@ -1,25 +1,21 @@
-import { NextResponse } from "next/server";
+import { NextResponse, NextRequest } from "next/server";
 import fs from "fs";
 import path from "path";
 
-const baseUrl = "https://template-6-api.vercel.app";
-
-export async function GET() {
+export async function GET(request: NextRequest) {
   try {
+    const baseUrl = new URL(request.url).origin;
     const imagesDir = path.join(process.cwd(), "public", "images");
 
-    // Read all files in the images directory
     const files = fs.readdirSync(imagesDir);
 
-    // Filter for image files and create URLs for them
     const images = files
-      .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file)) // Filter image files
+      .filter((file) => /\.(jpg|jpeg|png|gif|webp)$/i.test(file))
       .map((file) => ({
         name: file,
-        url: `${baseUrl}/images/${encodeURIComponent(file)}`, // Generate full URL
+        url: `${baseUrl}/images/${encodeURIComponent(file)}`,
       }));
 
-    // Return a JSON object of images
     return NextResponse.json({ images });
   } catch (error) {
     console.error("Error reading images directory:", error);

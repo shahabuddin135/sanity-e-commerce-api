@@ -1,24 +1,20 @@
-"use client";
+﻿"use client";
 
 import React, { useState } from "react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
-import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { ChevronDown, ChevronUp, ExternalLink } from "lucide-react";
-import { Marcellus } from "next/font/google";
-
-const marcellus = Marcellus({
-  subsets: ["latin"],
-  weight: ["400"],
-  variable: "--font-marcellus",
-});
+import { atomOneLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
+import { ChevronDown } from "lucide-react";
+import { useBaseUrl } from "@/lib/useBaseUrl";
+import CopyButton from "@/components/CopyButton";
+import Image from "next/image";
 
 const endpoints = [
   {
     title: "Get All Products",
     method: "GET",
     path: "/api/products",
-    description: "Retrieve a list of all products in the catalog.",
+    description: "Retrieve a list of all products in the catalog as a JSON array.",
     responseFields: [
       { name: "id", description: "Unique product identifier" },
       { name: "name", description: "Product name" },
@@ -28,91 +24,35 @@ const endpoints = [
       { name: "discount", description: "Discount percentage" },
       { name: "category", description: "Product category" },
       { name: "tags", description: "Array of product tags" },
-      { name: "mainImage", description: "Containing the main product image URL" },
-      { name: "sideAngleImages", description: "Array of objects containing different angles image URLs & unique key" },
+      { name: "mainImage", description: "Main product image URL object" },
+      { name: "sideAngleImages", description: "Array of angle image URLs" },
       { name: "color", description: "Available colors" },
       { name: "sizes", description: "Available sizes" },
       { name: "stock", description: "Current stock count" },
-      { name: "dimensions", description: "Product dimensions" },
+      { name: "dimensions", description: "Product dimensions (width, height, depth, weight)" },
       { name: "material", description: "Primary material used" },
-      { name: "secondaryMaterial", description: "Secondary material used" },
-      { name: "configuration", description: "Product configuration" },
-      { name: "upholsteryMaterial", description: "Upholstery material" },
-      { name: "upholsteryColor", description: "Upholstery color" },
-      { name: "fillingMaterial", description: "Filling material" },
-      { name: "finishType", description: "Finish type" },
-      { name: "originOfManufacture", description: "Origin of manufacture" },
-      { name: "warranty", description: "Warranty details" },
-      { name: "rating", description: "Product rating details" },
-      { name: "salesPackage", description: "Items included in sales package" },
-      { name: "modelNumber", description: "Product model number" },
-      { name: "sku", description: "Stock Keeping Unit" },
-      { name: "features", description: "Array of product features" },
+      { name: "warranty", description: "Warranty details object" },
+      { name: "rating", description: "Rating average and breakdown" },
+      { name: "features", description: "Array of product feature strings" },
     ],
     exampleResponse: `[
   {
     "id": "SS002",
     "name": "Modern Leather Sofa",
-    "description": "A sleek and luxurious leather sofa...",
     "price": 320000,
     "originalPrice": 350000,
     "discount": 8.57,
     "category": "Sofas",
-    "tags": ["Leather", "Modern", "Luxury", "Home"],
-  
-      "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
-
-      "sideAngleImages": [
-        { "key": "side1", "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg" },
-        { "key": "side2", "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg" },
-        { "key": "side3", "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg" },
-        { "key": "side4", "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg" }
-      ],
-    
+    "tags": ["Leather", "Modern", "Luxury"],
+    "mainImage": "https://BASE_URL/images/bed-main.jpeg",
+    "sideAngleImages": [
+      { "key": "side1", "url": "https://BASE_URL/images/bed%20(5).jpeg" }
+    ],
     "color": ["Black", "Brown"],
-    "sizes": ["L", "XL"],
     "stock": 8,
-    "dimensions": {
-      "width": "280 cm",
-      "height": "80 cm",
-      "depth": "170 cm",
-      "weight": "50 kg",
-      "seatHeight": "42 cm",
-      "legHeight": "6 cm"
-    },
     "material": "Genuine Leather",
-    "secondaryMaterial": "Stainless Steel",
-    "configuration": "Straight",
-    "upholsteryMaterial": "Genuine Leather",
-    "upholsteryColor": "Black",
-    "fillingMaterial": "High-Density Foam",
-    "finishType": "Glossy",
-    "originOfManufacture": "Italy",
-    "warranty": {
-      "summary": "2 Years Warranty",
-      "serviceType": "Email at support@luxurysofas.com for claims",
-      "covered": "Manufacturing defects",
-      "notCovered": "Damage due to misuse",
-      "domesticWarranty": "2 Years"
-    },
-    "rating": {
-      "average": 4.6,
-      "breakdown": {
-        "fiveStars": 180,
-        "fourStars": 120,
-        "threeStars": 30,
-        "twoStars": 5,
-        "oneStar": 2
-      }
-    },
-    "salesPackage": "1 Leather Sofa, 2 Cushions",
-    "modelNumber": "LSBLK001",
-    "sku": "SS002",
-    "features": [
-      "Adjustable Headrest: No",
-      "Maximum Load Capacity: 300 KG",
-      "Handmade: Yes"
-    ]
+    "warranty": { "summary": "2 Years Warranty" },
+    "rating": { "average": 4.6 }
   }
 ]`,
   },
@@ -124,246 +64,256 @@ const endpoints = [
     responseFields: [
       { name: "id", description: "Unique product identifier" },
       { name: "name", description: "Product name" },
-      { name: "description", description: "Detailed product description" },
-      { name: "price", description: "Current price (in paise/cents)" },
-      { name: "originalPrice", description: "Original price before discount" },
-      { name: "discount", description: "Discount percentage" },
-      { name: "category", description: "Product category" },
-      { name: "tags", description: "Array of product tags" },
-      { name: "mainImage", description: "Containing the main product image URL" },
-      { name: "sideAngleImages", description: "Array of objects containing different angles image URLs & unique key" },
-      { name: "color", description: "Available colors" },
-      { name: "sizes", description: "Available sizes" },
-      { name: "stock", description: "Current stock count" },
-      { name: "dimensions", description: "Product dimensions" },
-      { name: "material", description: "Primary material used" },
-      { name: "secondaryMaterial", description: "Secondary material used" },
-      { name: "configuration", description: "Product configuration" },
-      { name: "upholsteryMaterial", description: "Upholstery material" },
-      { name: "upholsteryColor", description: "Upholstery color" },
-      { name: "fillingMaterial", description: "Filling material" },
-      { name: "finishType", description: "Finish type" },
-      { name: "originOfManufacture", description: "Origin of manufacture" },
-      { name: "warranty", description: "Warranty details" },
-      { name: "rating", description: "Product rating details" },
-      { name: "salesPackage", description: "Items included in sales package" },
-      { name: "modelNumber", description: "Product model number" },
-      { name: "sku", description: "Stock Keeping Unit" },
-      { name: "features", description: "Array of product features" },
+      { name: "price", description: "Current price" },
+      { name: "mainImage", description: "Main product image URL" },
+      { name: "sideAngleImages", description: "Array of angle image objects" },
+      { name: "warranty", description: "Warranty details object" },
+      { name: "rating", description: "Rating average and breakdown" },
+      { name: "features", description: "Array of product feature strings" },
     ],
     exampleResponse: `{
   "id": "SS002",
   "name": "Modern Leather Sofa",
-  "description": "A sleek and luxurious leather sofa...",
   "price": 320000,
-  "originalPrice": 350000,
-  "discount": 8.57,
-  "category": "Sofas",
-  "tags": ["Leather", "Modern", "Luxury", "Home"],
-  
-    "mainImage": "https://template-6-api.vercel.app/images/bed-main.jpeg",
-
-    "sideAngleImages": [
-      { "key": "side1", "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg" },
-      { "key": "side2", "url": "https://template-6-api.vercel.app/images/bed%20(4).jpeg" },
-      { "key": "side3", "url": "https://template-6-api.vercel.app/images/bed%20(2).jpeg" },
-      { "key": "side4", "url": "https://template-6-api.vercel.app/images/bed%20(1).jpeg" }
-    ],
- 
-  "color": ["Black", "Brown"],
-  "sizes": ["L", "XL"],
-  "stock": 8,
-  "dimensions": {
-    "width": "280 cm",
-    "height": "80 cm",
-    "depth": "170 cm",
-    "weight": "50 kg",
-    "seatHeight": "42 cm",
-    "legHeight": "6 cm"
-  },
-  "material": "Genuine Leather",
-  "secondaryMaterial": "Stainless Steel",
-  "configuration": "Straight",
-  "upholsteryMaterial": "Genuine Leather",
-  "upholsteryColor": "Black",
-  "fillingMaterial": "High-Density Foam",
-  "finishType": "Glossy",
-  "originOfManufacture": "Italy",
-  "warranty": {
-    "summary": "2 Years Warranty",
-    "serviceType": "Email at support@luxurysofas.com for claims",
-    "covered": "Manufacturing defects",
-    "notCovered": "Damage due to misuse",
-    "domesticWarranty": "2 Years"
-  },
-  "rating": {
-    "average": 4.6,
-    "breakdown": {
-      "fiveStars": 180,
-      "fourStars": 120,
-      "threeStars": 30,
-      "twoStars": 5,
-      "oneStar": 2
-    }
-  },
-  "salesPackage": "1 Leather Sofa, 2 Cushions",
-  "modelNumber": "LSBLK001",
-  "sku": "SS002",
-  "features": [
-    "Adjustable Headrest: No",
-    "Maximum Load Capacity: 300 KG",
-    "Handmade: Yes"
-  ]
+  "mainImage": "https://BASE_URL/images/bed-main.jpeg",
+  "warranty": { "summary": "2 Years Warranty" },
+  "rating": { "average": 4.6 },
+  "features": ["Maximum Load Capacity: 300 KG", "Handmade: Yes"]
 }`,
   },
   {
     title: "Get All Images",
     method: "GET",
     path: "/api/images",
-    description: "Retrieve a list of all available images.",
+    description: "Retrieve a list of all available hosted images with their full absolute URLs.",
     responseFields: [
       { name: "images", description: "Array of image objects" },
       { name: "name", description: "Image filename" },
-      { name: "url", description: "Full URL to image including base URL" },
+      { name: "url", description: "Full absolute URL (reflects current host)" },
     ],
     exampleResponse: `{
   "images": [
     {
       "name": "bed-main.jpeg",
-      "url": "https://template-6-api.vercel.app/images/bed-main.jpeg"
+      "url": "https://BASE_URL/images/bed-main.jpeg"
     },
     {
       "name": "bed%20(5).jpeg",
-      "url": "https://template-6-api.vercel.app/images/bed%20(5).jpeg"
+      "url": "https://BASE_URL/images/bed%20(5).jpeg"
     }
   ]
 }`,
   },
   {
-    title: "Access Individual Images",
+    title: "Access Individual Image",
     method: "GET",
     path: "/images/[filename]",
-    description: "Retrieve a specific image by its filename.",
+    description: "Directly access a specific image file by its filename from the public directory.",
     responseFields: [
-      { name: "name", description: "Image filename" },
-      { name: "url", description: "Relative path to image" },
+      { name: "—", description: "Returns the raw image binary (JPEG / PNG / WebP)" },
     ],
-    exampleResponse: `{
-  "name": "bed-main.jpeg",
-  "url": "/images/bed-main.jpeg"
-}`,
+    exampleResponse: `// Direct browser URL — returns the image file:
+https://BASE_URL/images/bed-main.jpeg`,
   },
 ];
 
-interface EndpointProps {
-  endpoint: {
-    title: string;
-    method: string;
-    path: string;
-    description: string;
-    responseFields: { name: string; description: string }[];
-    exampleResponse: string;
-  };
-  index: number;
-  isOpen: boolean;
-  toggleEndpoint: (index: number) => void;
-}
-
-const Endpoint: React.FC<EndpointProps> = ({
-  endpoint,
+function EndpointRow({
+  ep,
   index,
-  isOpen,
-  toggleEndpoint,
-}) => {
+  open,
+  toggle,
+  baseUrl,
+}: {
+  ep: (typeof endpoints)[0];
+  index: number;
+  open: boolean;
+  toggle: () => void;
+  baseUrl: string;
+}) {
+  const displayUrl = (s: string) =>
+    baseUrl ? s.replace(/BASE_URL/g, baseUrl.replace(/^https?:\/\//, "")) : s;
+
+  const fullUrl = `${baseUrl || "https://your-domain.com"}${ep.path}`;
+
   return (
-    <div className="mb-6">
+    <div className="border-b border-stone-200 last:border-b-0 transition-colors duration-150 hover:bg-stone-50/50">
       <button
-        onClick={() => toggleEndpoint(index)}
-        className="flex items-center justify-between w-full text-left text-xl font-semibold bg-indigo-300 p-4 rounded-lg hover:bg-indigo-200 transition-colors duration-200"
+        onClick={toggle}
+        className={`w-full flex items-center gap-6 py-6 text-left group transition-colors duration-150 ${open ? 'bg-stone-50/70' : ''}`}
       >
-        <span>{`${endpoint.method} ${endpoint.path} - ${endpoint.title}`}</span>
-        {isOpen ? <ChevronUp size={24} /> : <ChevronDown size={24} />}
+        <span className="text-[0.6rem] font-mono text-stone-300 shrink-0 w-6">
+          {String(index + 1).padStart(2, "0")}
+        </span>
+        <span className="text-[0.6rem] uppercase tracking-[0.2em] text-stone-400 shrink-0 w-8 font-mono bg-stone-100 border border-stone-200 px-1.5 py-0.5">
+          {ep.method}
+        </span>
+        <code className={`flex-1 text-xs font-mono truncate transition-colors ${
+          open ? 'text-stone-900' : 'text-stone-700 group-hover:text-stone-900'
+        }`}>
+          {ep.path}
+        </code>
+        <span className="hidden md:block text-[0.6rem] text-stone-400 shrink-0 max-w-[240px] truncate">
+          {ep.description}
+        </span>
+        <ChevronDown
+          size={14}
+          className={`shrink-0 transition-transform duration-300 ${open ? 'rotate-180 text-stone-700' : 'text-stone-400 group-hover:text-stone-600'}`}
+        />
       </button>
-      {isOpen && (
-        <motion.div
-          initial={{ opacity: 0, height: 0 }}
-          animate={{ opacity: 1, height: "auto" }}
-          exit={{ opacity: 0, height: 0 }}
-          transition={{ duration: 0.3 }}
-          className="mt-4 pl-4 border-l-2 border-indigo-200"
-        >
-          <p className="mb-2 text-gray-700">{endpoint.description}</p>
-          <h4 className="font-semibold text-indigo-700 mb-2">Response Fields:</h4>
-          <ul className="list-disc list-inside text-gray-700 mb-4">
-            {endpoint.responseFields.map((field, i) => (
-              <li key={i}>
-                <code className="bg-indigo-100 px-1 rounded">{field.name}</code> -{" "}
-                {field.description}
-              </li>
-            ))}
-          </ul>
-          <h4 className="font-semibold text-indigo-700 mb-2">Example Response:</h4>
-          <SyntaxHighlighter language="json" style={atomDark} className="rounded-md">
-            {endpoint.exampleResponse}
-          </SyntaxHighlighter>
-        </motion.div>
-      )}
+
+      <AnimatePresence initial={false}>
+        {open && (
+          <motion.div
+            key="content"
+            initial={{ height: 0, opacity: 0 }}
+            animate={{ height: "auto", opacity: 1 }}
+            exit={{ height: 0, opacity: 0 }}
+            transition={{ duration: 0.3, ease: [0.4, 0, 0.2, 1] }}
+            className="overflow-hidden"
+          >
+            <div className="pb-10 pl-14 space-y-8">
+              <div className="flex items-center gap-3">
+                <code className="flex-1 text-xs font-mono text-stone-600 bg-stone-100 border border-stone-200 px-4 py-2.5 overflow-x-auto block">
+                  {fullUrl}
+                </code>
+                <CopyButton text={fullUrl} />
+              </div>
+
+              <p className="text-sm text-stone-500 leading-relaxed max-w-2xl">
+                {ep.description}
+              </p>
+
+              <div>
+                <p className="text-[0.6rem] uppercase tracking-[0.28em] text-stone-400 mb-4">
+                  Response Fields
+                </p>
+                <div className="space-y-3 border-t border-stone-200 pt-4">
+                  {ep.responseFields.map((field, i) => (
+                    <div key={i} className="flex items-start gap-5">
+                      <code className="shrink-0 text-[0.7rem] font-mono text-stone-600 w-36 pt-0.5">
+                        {field.name}
+                      </code>
+                      <span className="text-xs text-stone-400 leading-relaxed">
+                        {field.description}
+                      </span>
+                    </div>
+                  ))}
+                </div>
+              </div>
+
+              <div>
+                <div className="flex items-center justify-between mb-4">
+                  <p className="text-[0.6rem] uppercase tracking-[0.28em] text-stone-400">
+                    Example Response
+                  </p>
+                  <CopyButton text={displayUrl(ep.exampleResponse)} />
+                </div>
+                <div className="border border-stone-200 overflow-hidden">
+                  <SyntaxHighlighter
+                    language="json"
+                    style={atomOneLight}
+                    customStyle={{
+                      margin: 0,
+                      background: "#FAF8F4",
+                      fontSize: "0.72rem",
+                      padding: "1.25rem 1.5rem",
+                      fontFamily: "var(--font-geist-mono), monospace",
+                    }}
+                  >
+                    {displayUrl(ep.exampleResponse)}
+                  </SyntaxHighlighter>
+                </div>
+              </div>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
-};
+}
 
-const DocsPage = () => {
-  const [openEndpoints, setOpenEndpoints] = useState<boolean[]>(
-    new Array(endpoints.length).fill(false)
-  );
-
-  const toggleEndpoint = (index: number) => {
-    setOpenEndpoints((prev) =>
-      prev.map((isOpen, i) => (i === index ? !isOpen : isOpen))
-    );
-  };
+export default function DocsPage() {
+  const baseUrl = useBaseUrl();
+  const [openIdx, setOpenIdx] = useState<number | null>(null);
+  const toggle = (i: number) => setOpenIdx((prev) => (prev === i ? null : i));
 
   return (
-    <div className="min-h-screen bg-gradient-to-br pt-40 from-indigo-50 to-purple-50 py-12 px-4 sm:px-6 lg:px-8">
-      <div className="max-w-3xl mx-auto">
-        <motion.h1
-          className="text-4xl font-bold text-center text-indigo-900 mb-20"
-          initial={{ opacity: 0, y: -20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5 }}
-        >
-          <h1 className={`${marcellus.className}`}>Furniture API Documentation</h1>
-        </motion.h1>
+    <main className="bg-[#F4F0E6] min-h-screen">
+      <section className="relative overflow-hidden border-b border-stone-200">
+        <div className="absolute right-0 top-0 bottom-0 w-1/2 hidden lg:block">
+          <Image
+            src="/images/white-chair-main.jpeg"
+            alt="Chair"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-gradient-to-r from-[#F4F0E6] via-[#F4F0E6]/50 to-transparent" />
+        </div>
+
+        <div className="relative max-w-screen-xl mx-auto px-8 lg:px-16 xl:px-20 pt-32 pb-20">
+          <motion.div
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7 }}
+          >
+            <div className="flex items-center gap-4 mb-8">
+              <span className="text-[0.6rem] uppercase tracking-[0.3em] text-stone-400">Reference</span>
+              <span className="h-px w-16 bg-stone-200" />
+            </div>
+            <h1
+              className="font-serif italic font-light text-stone-900 leading-[0.9] mb-6"
+              style={{ fontSize: "clamp(2.8rem, 7vw, 5.5rem)" }}
+            >
+              API<br />Reference.
+            </h1>
+            <p className="text-sm text-stone-500 max-w-md leading-relaxed mb-8">
+              All endpoints are read-only <code className="font-mono text-stone-700">GET</code> requests.
+              No authentication required. Image URLs dynamically reflect the current host.
+            </p>
+            <div className="inline-flex items-center gap-3">
+              <span className="text-[0.6rem] uppercase tracking-[0.22em] text-stone-400">Base URL</span>
+              <code className="text-xs font-mono text-stone-600 bg-stone-100 border border-stone-200 px-3 py-1.5">
+                {baseUrl || "https://your-domain.com"}
+              </code>
+              <CopyButton text={baseUrl || "https://your-domain.com"} />
+            </div>
+          </motion.div>
+        </div>
+      </section>
+
+      <section className="max-w-screen-xl mx-auto px-8 lg:px-16 xl:px-20 py-16">
+        <div className="flex items-center gap-4 mb-8">
+          <p className="text-[0.6rem] uppercase tracking-[0.3em] text-stone-400 shrink-0">Endpoints</p>
+          <span className="h-px flex-1 bg-stone-200" />
+          <p className="text-[0.6rem] font-mono text-stone-300 shrink-0">{endpoints.length} Routes</p>
+        </div>
+
+        <div className="hidden md:flex items-center gap-6 py-3 border-b border-stone-200">
+          <span className="text-[0.6rem] uppercase tracking-[0.22em] text-stone-300 w-6 shrink-0">No</span>
+          <span className="text-[0.6rem] uppercase tracking-[0.22em] text-stone-300 shrink-0 w-8">Verb</span>
+          <span className="text-[0.6rem] uppercase tracking-[0.22em] text-stone-300 flex-1">Path</span>
+          <span className="text-[0.6rem] uppercase tracking-[0.22em] text-stone-300 max-w-[240px]">Description</span>
+          <span className="w-4" />
+        </div>
+
         <motion.div
-          className="bg-white rounded-xl text-indigo-900 shadow-lg p-6 mb-8"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          {endpoints.map((endpoint, index) => (
-            <Endpoint
-              key={index}
-              endpoint={endpoint}
-              index={index}
-              isOpen={openEndpoints[index]}
-              toggleEndpoint={toggleEndpoint}
+          {endpoints.map((ep, i) => (
+            <EndpointRow
+              key={i}
+              ep={ep}
+              index={i}
+              open={openIdx === i}
+              toggle={() => toggle(i)}
+              baseUrl={baseUrl}
             />
           ))}
         </motion.div>
-        <div className="mt-8 text-center">
-          <a
-            href="https://template-6-api.vercel.app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center text-indigo-600 hover:text-indigo-800 transition-colors duration-200"
-          >
-            Visit API Base URL
-            <ExternalLink size={20} className="ml-2" />
-          </a>
-        </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
-};
-
-export default DocsPage;
+}
